@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toor Organic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="assets/images/toor-organic-logo(1).png" alt="Toor Organic Logo">
+            </div>
+
+            <!-- NAV MENU -->
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+
+                    <!-- DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#">Product ▾</a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="products.html">Basmati Rice</a></li>
+                            <li><a href="#">Oil</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                    <li class="nav-cta">
+                        <a href="#" class="order-btn">Order Now</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" style="display: none;"></i>
+            </div>
+
+            <!-- <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div> -->
+
+        </div>
+    </header>
+
+
+
+    <section class="product-detail">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="assets/images/28kg-bag-mockup.png" id="mainProductImage" alt="Royal Mogra Rice">
+            </div>
+            <div class="thumbnail-slider">
+                <button class="thumb-prev">‹</button>
+                <div class="thumbnails">
+                    <img src="assets/images/28kg-bag-mockup.png" class="thumb active"
+                        data-image="assets/images/28kg-bag-mockup.png" alt="1kg Pack">
+                    <img src="assets/images/royal-mogra-28kg-backside.png" class="thumb"
+                        data-image="assets/images/royal-mogra-28kg-backside.png" alt="5kg Pack">
+                </div>
+                <button class="thumb-next">›</button>
+            </div>
+        </div>
+
+        <div class="product-info-panel">
+            <h1 class="product-title">Royal Mogra Rice</h1>
+            <h2 class="product-subtitle">Quality in every grain, trust in every meal</h2>
+
+            <p class="product-description">
+            Royal Mogra Rice is a premium everyday rice known for its rich aroma, soft texture, and delicate flavor. It has fine,
+            slender grains that cook light, fluffy, and non-sticky, making it ideal for daily meals. After cooking, the grains
+            remain separate and absorb spices and flavors beautifully. Royal Mogra Rice is perfect for pulao, khichdi, fried rice,
+            steamed rice, and traditional Indian meals. Its pleasant fragrance and consistent quality make it a reliable choice for
+            both home kitchens and food service.
+            </p>
+
+            <div class="packsize-selector">
+                <p>Available Pack:</p>
+                <div class="size-btns">
+                    <button class="size-btn" data-image="assets/images/28kg-bag-mockup.png" data-weight="1kg">26kg +
+                        2kg FREE = 28kg</button>
+                    <!-- <button class="size-btn" data-image="assets/images/Premium-(1.5kg).png" data-weight="5kg">26kg + 2kg FREE = 28kg</button> -->
+                </div>
+            </div>
+
+            <div class="purchase-actions">
+                <p>Buy Now From:</p>
+                <a href="#" target="_blank" class="amazon-btn">
+                    <img src="assets/images/amazon-logo.png" alt="Contact Us">
+                </a>
+            </div>
+
+            <div class="specs-table">
+                <h3>Details</h3>
+                <div class="spec-row">
+                    <div class="spec-item"><span>Product :</span>Royal Mogra Rice</div>
+                    <div class="spec-item"><span>Weight :</span> 26kg + 2kg FREE = 28kg </div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-item"><span>Rice Type :</span> Authentic Range</div>
+                    <div class="spec-item"><span>Package Type :</span> Bag</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-indicators">
+        <div class="indicator">
+            <div class="icon-box"><i class="fa-solid fa-wheat-awn"></i></div>
+            <p>Premium Quality</p>
+        </div>
+        <div class="indicator">
+            <div class="icon-box"><i class="fa-solid fa-heart-pulse"></i></div>
+            <p>Nutritious & Healthy</p>
+        </div>
+        <div class="indicator">
+            <div class="icon-box"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+            <p>Value For Money</p>
+        </div>
+        <div class="indicator">
+            <div class="icon-box"><i class="fa-solid fa-certificate"></i></div>
+            <p>Certified Food</p>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <!-- TOP SECTION -->
+        <div class="footer-top">
+            <img src="assets/images/toor-organic-logo(1).png" class="footer-logo" alt="logo">
+
+            <p class="footer-desc">
+                Indulge in the <span class="gold-text">TOUCH OF AROMA</span> and taste of our biryani, made with only
+                the
+                freshest ingredients.
+                Experience the delicious aroma and taste of traditional Indian biryani in the comfort of your own home.
+            </p>
+        </div>
+
+
+        <!-- <div class="footer-divider">
+        <span class="line"></span>
+        <img src="assets/icons/leaf-icon.png" alt="divider">
+        <span class="line"></span>
+    </div> -->
+
+        <!-- <hr class="footer-line"> -->
+
+        <!-- GRID SECTION -->
+        <div class="footer-grid">
+
+            <div>
+                <h3><i class="fa-solid fa-wheat-awn"></i>Product</h3>
+                <ul>
+                    <li><i class="fa-solid fa-chevron-right"></i>Authentic Range</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Traditional Range</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Basmati Rice Range</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Value Range</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Biryani Kit</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><i class="fa-solid fa-link"></i>Quick Links</h3>
+                <ul>
+                    <li><i class="fa-solid fa-chevron-right"></i>About Us</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Media</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Contact Us</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Terms And Conditions</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Privacy Policy</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><i class="fa-solid fa-cart-shopping"></i>Ecommerce</h3>
+                <ul>
+                    <li><i class="fa-solid fa-chevron-right"></i>Amazon</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Big Basket</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Zepto</li>
+                    <li><i class="fa-solid fa-chevron-right"></i>Swiggy</li>
+                </ul>
+            </div>
+
+            <div class="contact-card">
+                <h3><i class="fa-solid fa-phone"></i>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i>
+                    <a href="https://maps.app.goo.gl/dopJDJMo8Jztt2ZP8" target="_blank" class="contact-card">Toor Organic Pvt. Ltd.
+                        Office N0-409, 4th floor, Unicity Business Park,
+                        Dhakoli, Zirakpur,
+                        Punjab- 106104 (india)</a>
+                </p>
+            
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0176225730926" class="contact-card">Call: 017622-5730926</a></p>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:info@toororganic.com"
+                        class="contact-card">info@toororganic.com</a></p>
+
+                <!-- SOCIAL -->
+                <div class="follow-us">
+                    <span>FOLLOW US</span>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PREMIUM BADGES SECTION (New) -->
+        <div class="footer-badges">
+            <div class="badge-item"><img src="assets/icons/nature.png"><span>100% NATURAL</span></div>
+            <div class="badge-item"><img src="assets/icons/no-chemical.png"><span>CHEMICAL FREE</span></div>
+            <div class="badge-item"><img src="assets/icons/service.png"><span>PREMIUM QUALITY</span></div>
+            <div class="badge-item"><img src="assets/icons/leaf.png"><span>SUSTAINABLE</span></div>
+            <div class="badge-item"><img src="assets/icons/trustworthiness.png"><span>TRUSTED BRAND</span></div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p><i class="fa-solid fa-heart"></i> 2026 Toor Organic. All Rights Reserved. <i
+                    class="fa-solid fa-wheat-awn"></i></p>
+
+        </div>
+
+        <!-- SCROLL TOP -->
+        <div class="scroll-top" id="scrollTop">
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+
+    </footer>
+
+
+    <script src="assets/main.js"></script>
+</body>
+
+</html>

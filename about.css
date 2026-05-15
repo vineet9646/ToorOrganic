@@ -1,0 +1,622 @@
+/* --- Root Styles & Typography --- */
+
+:root {
+    --premium-purple: #3d1b4f;
+    --vivid-purple: #8139b5;
+    --accent-gold: #ffcc00;
+    --light-lavender: #f8f1ff;
+    --white: #ffffff;
+    --text-main: #2d2d2d;
+    --text-muted: #666666;
+    --premium-purple1: #8D308E;
+    --dark-purple: #2a1236;
+    --dark-purple1: #5e1d5f;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --accent-gold1: #FFD700;
+    --text-light: #f4f4f4;
+    --metallic-gold: #D4AF37;
+    /* The professional gold for icons */
+    --text-on-purple: #f8f1ff;
+    /* Soft off-white for text on purple */
+    --metallic-gold: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+    --gold-shadow: 0 10px 30px rgba(184, 134, 11, 0.4);
+    --mint-green: #98FFD2;
+        /* Premium Mint Green */
+        --ivory-white: #F9F6EE;;
+        /* Soft Ivory */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=inter:wght@300;500;700&display=swap');
+
+.about-luxury {
+    background: #f3e4fd;
+    
+    color: var(--premium-purple);
+    overflow-x: hidden;
+    padding-top: 100px;
+}
+
+/*=====hero section====*/
+
+.about-hero-section {
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+    gap: 50px;
+    min-height: 80vh;
+}
+
+.hero-text-wrap {
+    flex: 1;
+}
+
+.gold-subtitle {
+    color: var(--premium-purple);
+    letter-spacing: 5px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+/* Container for the divider */
+.icon-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0 25px 0;
+    width: 100%;
+}
+
+
+/* Center alignment for the text wrap */
+.hero-text-wrap {
+    text-align: center;
+    /* Matching the reference image center alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The Gold Lines */
+.icon-divider .line {
+    height: 1px;
+    background: var(--accent-gold);
+    flex-grow: 1;
+    position: relative;
+    opacity: 0.6;
+}
+
+/* Small dots at the end of lines for extra luxury */
+.icon-divider .line::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    top: -1.5px;
+}
+
+/* Position dots near the icon */
+.icon-divider .line:first-child::after {
+    right: 0;
+}
+
+.icon-divider .line:last-child::after {
+    left: 0;
+}
+
+/* icon Styling */
+.icon-divider i {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+}
+
+/* sub-paragraph Styling */
+.hero-description {
+    color: var(--premium-purple);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+
+.premium-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    line-height: 1.1;
+    color: var(--premium-purple);
+}
+
+.italic-gold {
+    font-style: italic;
+    font-weight: 700;
+    /* color: var(--accent-gold); */
+    color: #6B8E23;
+}
+
+.hero-image-wrap {
+    flex: 1;
+    position: relative;
+    padding-left: 50px;
+}
+
+.hero-image-wrap img {
+    width: 100%;
+    border-radius: 200px 200px 0 0;
+    /*luxury arch shape*/
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    background: var(--premium-purple);
+    color: var(--accent-gold);
+    padding: 25px 35px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: rotate(-5deg);
+
+
+    display: flex;
+        align-items: center;
+        gap: 10px;
+        /* Space between leaf and text */
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* The Leaf Icon */
+.floating-badge i {
+    font-size: 1.2rem;
+}
+
+
+/* The Gold Lines (Top and Bottom) */
+.floating-badge::before,
+.floating-badge::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: var(--accent-gold);
+}
+
+.floating-badge::before {
+    top: 15px;
+    /* Adjust based on your padding */
+}
+
+.floating-badge::after {
+    bottom: 15px;
+    /* Adjust based on your padding */
+}
+
+/* Ensure the text wraps nicely */
+.badge-text {
+    white-space: nowrap;
+}
+
+
+
+/* Container for the space between sections */
+.leaf-spacer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /* Adjust this height based on how much gap you want */
+    pointer-events: none;
+    /* Allows clicking through the leaves */
+    overflow: visible;
+}
+
+.bg-leaf {
+    position: absolute;
+    width: 250px;
+    /* Adjust size based on your design */
+    height: auto;
+    z-index: 1;
+    /* Keeps them above background but below text if needed */
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.05));
+    /* Subtle depth */
+}
+
+/* Position the 'opposite side.jpg' on the left */
+.leaf-left {
+    left: -20px;
+    /* Slightly off-screen for an organic look */
+    top: -50px;
+    /* Moves it up into the Hero section space */
+}
+
+/* Position the 'leaf-final (2).jpg' on the right */
+.leaf-right {
+    right: -20px;
+    top: 50px;
+    /* Offset from the left leaf for asymmetry */
+}
+
+
+
+
+
+/*--- asymmetric story section---*/
+
+.story-asymmetric {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 150px 10%;
+    align-items: center;
+    gap: 100px;
+}
+
+.story-image-box {
+    position: relative;
+}
+
+.story-image-box img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.gold-outline-box {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ffcc00;
+    z-index: 1;
+}
+
+.luxury-para {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #555;
+}
+
+.gold-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent-gold);
+    margin-top: 30px;
+}
+
+.section-title {
+    color: var(--premium-purple);
+}
+
+/*----vision cards---*/
+
+.vision-grid {
+    display: flex;
+    background: var(--premium-purple);
+    color: #fff;
+    padding: 120px 10%;
+    gap: 40px;
+}
+
+.vision-card {
+    flex: 1;
+    padding: 60px;
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-bg-icon {
+    position: absolute;
+    right: 20px;
+    bottom: -40px;
+    font-size: 10rem;
+    opacity: 0.05;
+    font-family: 'Playfair Display';
+}
+
+.vision-card h3 {
+    font-family: 'Playfair Display';
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+/*---stats---*/
+
+.stats-luxury {
+    padding: 150px 10%;
+    text-align: center;
+}
+
+.stats-wrap {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.stat-num {
+    display: block;
+    font-family: 'Playfair Display';
+    font-size: 4rem;
+    color: var(--premium-purple);
+}
+
+.stat-num small {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+}
+
+.stat-label {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*----animations----*/
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*why choose us*/
+
+.why-choose-us {
+    background-color: var(--premium-purple);
+    padding: 120px 10%;
+    /* color: #fff; */
+    color: var(--ivory-white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-title {
+    /* color: var(--light-lavender); */
+    color: var(--mint-green) !important;
+}
+
+
+
+.section-intro {
+    margin-bottom: 80px;
+}
+
+.luxury-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 204, 0, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-gold);
+    color: var(--premium-purple);
+
+    /* color: var(--mint-green); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    /* color: var(--accent-gold); */
+    color: var(--mint-green)
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: var(--ivory-white);
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-15px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.excellence-tag {
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 204, 0, 0.3);
+    padding: 40px;
+    font-style: italic;
+    font-family: 'Playfair Display';
+    font-size: 1.2rem;
+    /* color: var(--accent-gold); */
+    color: var(--mint-green);
+}
+
+@media screen and (max-width: 1024px) {
+    .luxury-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .why-choose-us {
+        padding: 80px 5%;
+    }
+
+    .luxury-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature-icon-wrap {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+
+    /*general spacing */
+
+    .about-luxury {
+        padding-top: 80px;
+    }
+
+    /*hero section stacking */
+    .about-hero-section {
+        flex-direction: column-reverse;
+        /*image first on mobile for impact*/
+        padding: 60px 5%;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .premium-heading {
+        font-size: 3.5rem;
+        margin-top: 20px;
+    }
+
+    .hero-image-wrap {
+        padding-left: 0;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .hero-image-wrap img {
+        border-radius: 150px 150px 0 0;
+        /*scaled down rich */
+    }
+
+    /*asymmmetric story section*/
+    .story-asymmetric {
+        grid-template-columns: 1fr;
+        padding: 80px 5%;
+    }
+
+    .story-text-box {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gold-outline-box {
+        top: -15px;
+        left: -15px;
+    }
+
+ /*vision grid stacking*/
+ .vision-grid {
+    flex-direction: column;
+    padding: 80px 5%;
+ }
+
+ .vision-card {
+    padding: 40px 20px;
+ }
+
+ .stats-luxury {
+     padding: 90px 2%;
+     text-align: center;
+ }
+}
+
+@media screen and (max-width: 768px) {
+
+    .premium-heading {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .stats-wrap {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .stat-num {
+        font-size: 3.5rem;
+    }
+
+    .floating-badge {
+        padding: 15px 20px;
+        font-size: 0.8rem;
+        bottom: 20px;
+    }
+
+    .luxury-para {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .card-bg-icon {
+        position: absolute;
+        right: 20px;
+        bottom: -5px;
+        font-size: 3rem;
+        opacity: o.05;
+        font-family: 'Playfair Display';
+    }
+}
+
+/* Responsive: Hide or shrink on mobile to prevent clutter */
+@media (max-width: 768px) {
+    .bg-leaf {
+        width: 150px;
+        opacity: 0.5;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .premium-heading {
+        font-size: 2.2rem;
+    }
+
+    .hero-image-wrap img {
+        border-radius: 100px 100px 0 0;
+    }
+}
+
