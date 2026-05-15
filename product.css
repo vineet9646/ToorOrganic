@@ -146,14 +146,82 @@
     /* Light tint on hover */
     color: var(--premium-purple) !important;
 }
-.purchase-actions .amazon-btn img {
-    width: 200px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
+/* Container styling */
+.purchase-actions {
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
+.purchase-actions p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* The Button Styling */
+.amazon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+
+    /* Background Gradient (Yellow to Gold) */
+    background: linear-gradient(to bottom, #f7dfa5 0%, #f0c14b 100%);
+
+    /* Shape and Border */
+    border: 1px solid #a88734;
+    border-radius: 8px;
+    padding: 8px 15px;
+    min-width: 150px;
+
+    /* Text Styling */
+    color: #111;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    /* Shadow for depth */
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset, 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* The "Buy Now" Text */
+.amazon-btn span {
+    margin-right: 10px;
+}
+
+/* Creating the Purple Arrow Icon with Code */
+.amazon-btn::after {
+    content: '➔';
+    /* Or use an SVG/Icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b1f50;
+    /* Deep purple from your design */
+    color: #f0c14b;
+    /* Yellow icon color */
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+/* Hover State */
+.amazon-btn:hover {
+    background: linear-gradient(to bottom, #f5d78e 0%, #eeb933 100%);
+    border-color: #9c7e31;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Click State */
+.amazon-btn:active {
+    background: #f0c14b;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
 /* Specs Table */
 .specs-table {
     margin-top: 40px;
