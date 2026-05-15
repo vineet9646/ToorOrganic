@@ -1815,9 +1815,22 @@ background-position: center;
     /* Subtle movement on hover */
 }
 
-/* .footer-grid ul li:hover {
-    color: #fff;
-} */
+
+/* quick links */
+
+
+.quick-links ul li a {
+    text-decoration: none;
+    /* Removes the underline */
+    color: inherit;
+  
+    transition: color 0.3s ease;
+    /* Makes the color change smooth */
+    display: inline-block;
+        cursor: pointer;
+}
+
+
 
 /* CONTACT */
 
