@@ -107,18 +107,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==========================================
-       3. STICKY NAVBAR & BACK TO TOP
-    ========================================== */
+          3. STICKY NAVBAR & BACK TO TOP
+       ========================================== */
     const scrollBtn = document.getElementById("scrollTop");
     const navbar = document.querySelector(".navbar");
 
     window.addEventListener("scroll", () => {
         if (navbar) {
             if (window.scrollY > 50) {
-                navbar.style.background = "var(--premium-purple)";
-                navbar.style.padding = "10px 0";
+                // Keep the deep dark background color on scroll instead of changing to purple
+                navbar.style.background = "#0D0D07";
+                navbar.style.padding = "8px 0"; // Keeps the sticky navbar slim on scroll
             } else {
-                navbar.style.padding = "15px 0";
+                navbar.style.padding = "15px 0"; // Returns to spacious default padding at top
             }
         }
 
@@ -133,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
-
 
     /* ==========================================
        4. 3D TILT ANIMATION (Testimonials)

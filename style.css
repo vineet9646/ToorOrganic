@@ -36,7 +36,7 @@ body {
 
 body {
     /* Subtle mesh gradient background gives 3D depth */
-    background: radial-gradient(circle at top left, #ffffff, #fdf4ff, #e9d5ff);
+    background: radial-gradient(circle at top left, #ffffff, #150319, #e9d5ff);
     background-attachment: fixed;
     color: #333;
 }
@@ -52,18 +52,19 @@ body {
     /* Reduced width for floating effect */
     margin: 0 auto;
     /* background: rgba(141, 48, 142, 0.8); */
-    background: var(--premium-purple);
+    background: #0D0D07;
+    /* background: rgba(13, 13, 7, 0.997) !important; */
     /* Semi-transparent */
     backdrop-filter: blur(15px);
     /* The Glass effect */
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
-    border-bottom: 4px solid var(--accent-gold);
+    border-bottom: 4px solid #D4820A;
         /* Adds a premium gold underline */
     /* border-radius: 100px; */
     /* Rounded pill shape */
     padding: 15px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 999;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -105,14 +106,15 @@ body {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #FFFFFF;
     font-size: 15px;
     letter-spacing: 1px;
     transition: 0.3s;
 }
 
 .nav-links ul li a:hover {
-    color: #F15A24;
+    /* color: #F15A24; */
+    color: #D4820A;
 }
 
 /* DROPDOWN */
@@ -122,7 +124,7 @@ body {
     top: 40px;
     left: 0;
     /* background: #8D308E; */
-    background: var(--premium-purple);
+    background: #0D0D07;
     min-width: 160px;
     display: none;
     flex-direction: column;
@@ -169,27 +171,66 @@ body {
     margin-left: 40px !important; /*extra space to separate from other links */
 }
 
-.order-btn {
-    background-color: var(--accent-gold);
-    color: #000 !important; /*dark text for high contrast on gold*/
+.phone-nav-btn {
+    background-color: #0D0D07 !important;
+    color: #D4820A !important;
+    /* Elegant black contrast text */
+    padding: 10px 22px;
+    /* border-radius: 30px; */
+    font-weight: 700;
+    font-size: 14px;
+    /* Scaled cleanly for phone string lengths */
+    letter-spacing: 0.5px;
+    text-transform: none !important;
+    /* Prevents text transformation issues */
+    border: 2px solid #D4820A !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* Gap between the font-awesome icon and text string */
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    box-shadow: 0 4px 15px rgba(214, 130, 10, 0.2);
+    white-space: nowrap;
+    /* Ensures number never breaks down to a 2nd line */
+}
+
+
+/* Luxury Hover State Change */
+.phone-nav-btn:hover {
+    background: transparent !important;
+    color: #D4820A !important;
+    box-shadow: 0 6px 20px rgba(214, 130, 10, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Subtle pulse or style control specifically for the phone icon inside navbar button */
+.phone-nav-btn i {
+    font-size: 12px;
+}
+
+
+/* .order-btn {
+    background-color: #D4820A;
+    color: #000 !important; 
     padding: 12px 25px;
-    border-radius: 50px; /* luxury pill shape */
+    border-radius: 50px; 
     font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1.5px;
-    transition: all 0.3 ease;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    transition: all 0.3 ease; */
+    /* box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); */
+    /* box-shadow: #D4820A;
     border: 2px solid transparent;
-}
+} */
 
 /* Hover effect */
-.order-btn:hover {
+/* .order-btn:hover {
     background: transparent;
     color: var(--accent-gold) !important;
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
     transform: translateY(-2px);
-}
+} */
 
 
 
@@ -203,7 +244,11 @@ body {
     overflow: hidden;
     background-color: #f8f1ff;
     /*fallback brand color*/
+    padding-top: 150px !important;
+        /* Safely offsets the fixed navbar space */
 }
+
+
 
 .slides {
     display: flex;
@@ -257,15 +302,17 @@ body {
     align-items: center;
     gap: 8px;
     padding: 8px 20px;
-    background: #fff;
+    /* background: #fff; */
     border: 1px solid rgba(61, 27, 79, 0.1);
     border-radius: 50px;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
-    color: var(--premium-purple);
-    letter-spacing: 1px;
+    /* color: var(--premium-purple); */
+    color: #5A7E22;
+    letter-spacing: 3px;
+    font-weight: 800;
     margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); */
 }
 
 /*typography*/
@@ -274,16 +321,25 @@ body {
 
     font-size: clamp(40px, 6vw, 80px);
 
-    color: var(--premium-purple);
+    /* color: var(--premium-purple); */
+    color: #FFFFFF;
     line-height: 1.1;
     margin: 0;
-    font-weight: 800;
+    font-weight: 600;
+}
+
+/* Styling for the second line of the heading */
+.premium-heading .alt-color {
+    color: #D4820A;
+    /* Your brand gold/orange color */
+    font-weight: 600;
 }
 
 .hero-desc {
     font-family: 'Inter', serif;
 font-size: 18px;
-color: #555;
+/* color: #555; */
+color: #CCCCBA;
 line-height: 1.6;
 margin: 25px 0 40px;
 max-width: 500px;
@@ -302,7 +358,8 @@ max-width: 500px;
 }
 
 .btn-primary {
-    background: var(--premium-purple);
+    /* background: var(--premium-purple); */
+    background: #D4820A;
     color: #fff;
     padding: 16px 35px;
     border-radius: 50px;
@@ -325,7 +382,8 @@ max-width: 500px;
 }
 
 .btn-secondary {
-    color: var(--premium-purple);
+    /* color: var(--premium-purple); */
+    color: #D4820A;
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
@@ -517,18 +575,19 @@ max-width: 500px;
     }
 
     .hero-badge {
-        background: #ffffff !important;
-        color: var(--premium-purple) !important;; 
+        /* background: #ffffff !important; */
+        /* color: var(--premium-purple) !important;;  */
         margin-bottom: 5px !important;
-        font-size: 11px !important;
+        font-size: 12px !important;
+        letter-spacing: 1px;
     }
 
 
     .premium-heading {
         font-size: 30px !important;
 
-        color: var(--premium-purple) !important;
-        text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8) !important;
+        color: #ffffff !important;
+        /* text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8) !important; */
         margin-bottom: 7px !important;
         line-height: 1.1 !important;
     }
@@ -563,7 +622,7 @@ max-width: 500px;
 
 .btn-secondary {
     font-size: 12px;
-    color: var(--premium-purple);
+    /* color: var(--premium-purple); */
     font-weight: 700;
 }
 
@@ -2070,10 +2129,10 @@ background-position: center;
     margin-left: 15px !important;
 }
 
-order-btn {
+/* order-btn {
     padding: 8px 15px;
     font-size: 11px;
-}
+} */
 
 
 
@@ -2223,7 +2282,7 @@ order-btn {
         height: 100vh;
         /* Premium Purple Glass Effect */
         /* background: rgba(141, 48, 142, 0.8); */
-        background: var(--premium-purple);
+        background: #0D0D07;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -2260,10 +2319,12 @@ order-btn {
     }
 
     .nav-links ul li:not(:last-child) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+        border-bottom: 0.001px solid #D4820A;
+        box-shadow: #D4820A 0px 1px 0px;
         width: 80%;
         /* Doesn't touch the edges, stays centered */
-        margin: 0 auto;
+        margin: 10px auto;
     }
 
     .menu-toggle {
@@ -2284,7 +2345,7 @@ order-btn {
 
     .menu-toggle.active .fa-xmark {
         display: block !important;
-        color: var(--accent-gold);
+        color: #D4820A;
         transform: rotate(90deg);
     }
 
@@ -2300,6 +2361,7 @@ order-btn {
 
     .menu-toggle {
         display: block;
+        color: #D4820A;
     }
 
     .nav-links.active {
@@ -2350,12 +2412,24 @@ order-btn {
         /*center it in the glass sidebar */
     }
 
-    .order-btn {
+
+        .phone-nav-btn {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 20px !important;
+            font-size: 15px !important;
+            border-radius: 30px !important;
+            margin: 20px auto 0 auto !important;
+            /* Premium rounded capsule wrapper on mobile */
+            width: 100%;
+        }
+    /* .order-btn {
         display: block;
         text-align: center;
         padding: 15px;
         font-size: 16px;
-    }
+    } */
 }
 
 
