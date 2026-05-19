@@ -564,12 +564,17 @@ max-width: 500px;
 
         justify-content: flex-start !important;
 
-        padding-top: 15% !important;
+        padding-top: 8% !important;
     }
 
     .hero-content {
-        padding: 0 30px !important;
+        /* padding: 0 30px !important; */
+        padding: 0 6% !important;
         text-align: left !important;
+
+
+        width: 100% !important;
+            max-width: 85% !important;
 
 
     }
@@ -577,59 +582,146 @@ max-width: 500px;
     .hero-badge {
         /* background: #ffffff !important; */
         /* color: var(--premium-purple) !important;;  */
-        margin-bottom: 1px !important;
-        margin-top: -1000px !important;
-        font-size: 12px !important;
-        letter-spacing: 1px;
+        /* margin-bottom: 1px !important; */
+        /* margin-top: -1000px !important; */
+        /* font-size: 12px !important;
+        letter-spacing: 1px; */
+
+
+        display: inline-flex !important;
+            align-items: center;
+            gap: 5px;
+            font-weight: 700 !important;
+            font-size: calc(10px + 0.5vw) !important;
+            letter-spacing: 1.5px !important;
+            margin-bottom: 8px !important;
+            text-transform: uppercase;
     }
 
 
     .premium-heading {
-        font-size: 30px !important;
 
+
+font-family: 'Playfair Display', serif !important;
+    font-size: 6.5vw !important;
+    /* Scales dynamic with screen width down to tiny devices */
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    line-height: 1.15 !important;
+    margin-bottom: 8px !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+
+        /* font-size: 25px !important;
         color: #ffffff !important;
-        /* text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8) !important; */
-        /* margin-bottom: px !important; */
-        line-height: 1.1 !important;
+        line-height: 1.0 !important; */
     }
 
-    .premium-heading br,
+    /* .premium-heading br,
     .hero-desc br {
         display: none !important;
-    }
+    } */
+
+
+/* Text color targets updated per your previous layout requests */
+.premium-heading .alt-color {
+    color: #D4820A !important;
+    /* Solid Brand Amber Tint */
+}
 
     .hero-desc {
-        font-size: 11px !important;
-        color: #CCCCBA !important;
-        max-width: 80% !important;
-        margin-top: 8px !important;
-        margin-bottom: 17px !important;
-        line-height: 1.5 !important;
+
+
+
+font-size: 3.5vw !important;
+    /* Scaled text size sizing constraints */
+    color: #F9F6EE !important;
+    /* Soft Warm True Ivory text color */
+    line-height: 1.4 !important;
+    max-width: 95% !important;
+    margin-bottom: 15px !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5) !important;
+
+
+        /* font-size: 11px !important;
+        color: #FFFFFF !important;
+        max-width: auto !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+        line-height: 1.9 !important;
+        letter-spacing: 0.px !important; */
     }
+
+/* Force line-breaks to disappear cleanly on small form factors if they crowd lines */
+.hero-desc br {
+    display: inline !important;
+}
+
 
 /*compact button stact for vertical layout*/
 .hero-btn-group {
+
+
+display: flex !important;
     flex-direction: column !important;
+    /* Inline setup keeps spacing elegant without eating vertical real estate */
     align-items: flex-start !important;
-    margin-top: -12px;
-    gap: 10px !important;
-}
+    gap: 12px !important;
+    margin-top: 5px !important;
+
+     /* flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-top: auto;
+    gap: 10px !important; */
+} 
 
 .btn-primary {
-    width: auto;
+    /* width: auto;
     padding: 5px 10px;
     font-size: 10px;
     
-    border-radius: 50px !important;
+    border-radius: 50px !important; */
+
+
+padding: 8px 16px !important;
+    font-size: 2.8vw !important;
+    font-weight: 700 !important;
+    border-radius: 30px !important;
+    text-decoration: none !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+
+
 }
 
 .btn-secondary {
-    font-size: 10px;
-    /* color: var(--premium-purple); */
-    margin-top: -5px;
-    padding: 1px 8px;
-    font-weight: 500;
 
+
+
+font-size: 2.8vw !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 0 !important;
+
+
+
+    /* font-size: 10px;
+    margin-top: auto;
+    padding: 1px 8px;
+    font-weight: 500; */
+
+}
+
+.btn-secondary i {
+    color: #D4820A !important;
+    /* Accent gold play arrow highlight */
 }
 
 /*hide desktop only UI clutter*/
@@ -644,7 +736,70 @@ max-width: 500px;
 
 
 
+@media screen and (max-width: 480px) {
 
+    /* 1. Recalibrate Layout Placement */
+    .hero-overlay {
+        padding-top: 55px !important;
+        /* Locks text precisely below your transparent navbar */
+    }
+
+    .hero-content {
+        padding: 0 20px !important;
+        /* Clean margins for small displays */
+        max-width: 90% !important;
+        /* Keeps text layout readable on the dark side of the sky */
+    }
+
+    /* 2. Precision Text Sizes to Avoid Overlapping the Printed Rice Sack */
+    .hero-badge {
+        font-size: 10px !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .premium-heading {
+        font-size: 21px !important;
+        /* Locked size keeps it crisp and avoids vertical stretching */
+        line-height: 1.1 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .hero-desc {
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+        max-width: 100% !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Force line breaks to disappear on ultra-small screens so text wraps naturally */
+    .premium-heading br,
+    .hero-desc br {
+        /* display: none !important; */
+    }
+
+    /* 3. Streamlined Compact Mobile Button Row */
+    .hero-btn-group {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Keeps them side-by-side to save vertical space */
+        align-items: flex-start !important;
+        gap: 15px !important;
+        margin-top: 0 !important;
+    }
+
+    .btn-primary {
+        padding: 6px 12px !important;
+        /* Smaller, tap-friendly luxury target size */
+        font-size: 9px !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .btn-secondary {
+        font-size: 9px !important;
+        padding: 0 !important;
+    }
+}
 
 
 
