@@ -465,17 +465,19 @@ max-width: 500px;
 }
 
 
-@media (min-width: 769px) and (max-width: 1350px) {
+@media (min-width: 769px) and (max-width: 1150px) {
+
+    
     .slider {
         width: 100vw !important;
 
         position: relative !important;
         left: 50%;
-
+padding-top: 100px !important;
         margin-left: -50vw !important;
 
         margin-right: -50vw !important;
-        aspect-ratio: 16/10 !important;
+        /* aspect-ratio: 16/10 !important; */
         height: auto !important;
         min-height: 0 !important;
 
@@ -486,8 +488,8 @@ max-width: 500px;
     .slide img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: contain !important;
-        
+        object-fit: cover !important;
+        /* padding-top: -100px !important; */
         object-position: center;
     }
 
