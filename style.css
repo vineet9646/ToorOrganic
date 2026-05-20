@@ -423,7 +423,7 @@ max-width: 500px;
 }
 
 .dots span.active {
-    background: #ffcc00;
+    background: #D4820A;
 }
 
 /*arrow controls*/
@@ -459,8 +459,8 @@ max-width: 500px;
 
 .prev:hover,
 .next:hover {
-    background: #ffcc00;
-    color: var(--premium-purple);
+    background: #D4820A;
+    color: #0D0D07;
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -774,11 +774,7 @@ font-size: 2.8vw !important;
         margin-bottom: 12px !important;
     }
 
-    /* Force line breaks to disappear on ultra-small screens so text wraps naturally */
-    .premium-heading br,
-    .hero-desc br {
-        /* display: none !important; */
-    }
+  
 
     /* 3. Streamlined Compact Mobile Button Row */
     .hero-btn-group {
@@ -821,11 +817,216 @@ font-size: 2.8vw !important;
 }
 
 
+
+/* ==========================================
+   TOOR ORGANIC EDITORIAL ABOUT SECTION
+========================================== */
+.editorial-about-section {
+    /* background-color: #0B0B05; */
+    background: #141409;
+    /* True matching dark luxury base background */
+    padding: 80px 4%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.editorial-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1.5fr 1fr;
+    /* Exact 3-column structural layout balance */
+    align-items: center;
+    gap: 50px;
+}
+
+/* Left Column: Image */
+.editorial-img-col {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+}
+
+.editorial-img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Center Column: Text Content Area */
+.editorial-content-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.green-label {
+    color: #7AA93C;
+    /* Clean organic sage green label accent tint */
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.editorial-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #FFFFFF;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.editorial-title .orange-accent {
+    color: #D4820A;
+    /* Exact brand amber/orange glow color split */
+}
+
+.title-underline {
+    width: 50px;
+    height: 2px;
+    background-color: #7AA93C;
+    margin-bottom: 25px;
+}
+
+.editorial-text {
+    font-family: 'Inter', sans-serif;
+    color: rgba(255, 255, 255, 0.75);
+    /* Soft white reading contrast */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 95%;
+}
+
+.editorial-btn {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.editorial-btn:hover {
+    border-color: #D4820A;
+    color: #D4820A;
+    transform: translateX(3px);
+}
+
+/* Right Column: Features Panel Stack */
+.editorial-features-col {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-left: 40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    /* Elegant separating vector rule line */
+}
+
+.feature-row-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.feature-icon-box {
+    font-size: 28px;
+    color: #7AA93C;
+    /* Icon highlights match the organic green tint */
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-sub {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.feature-main {
+    font-family: 'Playfair Display', serif;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 2px 0 0 0;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN ADAPTATIONS
+========================================== */
+@media screen and (max-width: 1100px) {
+    .editorial-container {
+        grid-template-columns: 1fr 1.2fr;
+        /* Shifts into a dual-column layout on smaller screens */
+        gap: 40px;
+    }
+
+    .editorial-features-col {
+        grid-column: span 2;
+        /* Forces row panel stretching below on medium viewports */
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .editorial-about-section {
+        padding: 60px 20px;
+    }
+
+    .editorial-container {
+        grid-template-columns: 1fr;
+        /* Clean single stacked column flow rule for mobile screens */
+        gap: 35px;
+    }
+
+    .editorial-img-col {
+        min-height: 250px;
+        max-height: 300px;
+    }
+
+    .editorial-title {
+        font-size: 28px;
+    }
+
+    .editorial-features-col {
+        grid-column: span 1;
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+    }
+}
+
+
 /* ==============SECTION icon feature ===============*/
 
 .features {
     /* background: var(--premium-purple); */
-    background: linear-gradient(to bottom, var(--premium-purple), var(--dark-purple));
+    /* background: linear-gradient(to bottom, var(--premium-purple), var(--dark-purple)); */
+    background: #141409;
     padding: 100px 5% 150px;
     /* padding: 30px 5%; */
     /* Increased padding for better flow */
@@ -955,8 +1156,8 @@ font-size: 2.8vw !important;
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
