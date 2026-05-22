@@ -19,6 +19,8 @@
         /* Soft off-white for text on purple */
         --metallic-gold: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
             --gold-shadow: 0 10px 30px rgba(184, 134, 11, 0.4);
+            --green: #7AA93C;
+            --orange: #D4820A;
 }
 html,
 body {
@@ -31,7 +33,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: sans-serif;
 }
 
 body {
@@ -42,7 +44,36 @@ body {
 }
 
 
+/* All headings default to Playfair Display */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+}
 
+/* Spans inside headings must inherit the heading font */
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+    font-family: inherit;
+}
+
+/* All body text defaults to Inter */
+p,
+a,
+li,
+span,
+label,
+input,
+button {
+    font-family: 'Inter', sans-serif;
+}
 
 /* NAVBAR */
 
@@ -317,7 +348,7 @@ body {
 
 /*typography*/
 .premium-heading {
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
 
     font-size: clamp(40px, 6vw, 80px);
 
@@ -336,7 +367,7 @@ body {
 }
 
 .hero-desc {
-    font-family: 'Inter', serif;
+    font-family: 'Inter', sans-serif;
 font-size: 18px;
 /* color: #555; */
 color: #CCCCBA;
@@ -1012,12 +1043,53 @@ font-size: 2.8vw !important;
         font-size: 28px;
     }
 
-    .editorial-features-col {
+    /* .editorial-features-col {
         grid-column: span 1;
         flex-direction: column;
         gap: 25px;
         align-items: flex-start;
-    }
+    } */
+
+        .editorial-features-col {
+            grid-column: span 1;
+    
+            /* Changed from 'column' to 'row' */
+            flex-direction: row;
+    
+            /* Evenly distributes the icons across the width */
+            justify-content: space-around;
+    
+            /* Vertically centers the content in the row */
+            align-items: center;
+    
+            /* Adjust gap for row layout */
+            gap: 4px;
+    
+            /* Clean up desktop borders/padding */
+            padding-left: 0;
+            border-left: none;
+    
+            /* Optional: Add a subtle separator line above the features list */
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+
+                .feature-sub {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 10px;
+                    text-transform: capitalize;
+                }
+        
+                .feature-main {
+                    font-family: 'Playfair Display', serif;
+                    color: #FFFFFF;
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin: 2px 0 0 0;
+                }
+
+    
 }
 
 
@@ -1080,35 +1152,49 @@ font-size: 2.8vw !important;
 .top-ornament .line {
     width: 40px;
     height: 1px;
-    background: #ffcc00;
+    /* background: #ffcc00; */
+    background: #7AA93C;
     /* Gold color */
 }
 
 .ornament-icon {
     width: 20px;
     height: 20px;
-    color: #ffcc00;
+    /* color: #ffcc00; */
+    /* color: #7AA93C; */
 }
 
 
-.header-divider {
+
+/* --- New Symmetric Center Divider System --- */
+.luxury-header-divider {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 20px;
+    /* Creates a clean, elegant empty space to the left and right of the heart icon */
+    margin-top: 25px;
+    /* Moves the entire divider line safely down below "Quality You Deserve" */
+    width: 100%;
 }
 
-.dot-line {
-    width: 60px;
+.divider-line-left,
+.divider-line-right {
+    width: 80px;
+    /* Sets a fixed, uniform premium length for the solid lines */
     height: 2px;
-    border-bottom: 2px dotted #ffcc00;
+    /* Precise thickness matching your layout's top ornament lines */
+    background-color: #7AA93C !important;
+    /* Solid organic green fill with zero gaps */
+    display: block;
 }
 
 .divider-icon {
-    width: 15px;
-    height: 15px;
-    opacity: 0.8;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+    opacity: 1;
 }
 
 
@@ -1124,7 +1210,7 @@ font-size: 2.8vw !important;
 .h2-underline {
     width: 50px;
     height: 3px;
-    background: #ffcc00;
+    background: #7AA93C;
     margin: 10px auto 25px;
     border-radius: 2px;
 }
@@ -1136,14 +1222,20 @@ font-size: 2.8vw !important;
 }
 
 .features-top-header h1 {
-    color: #fdf0d5;
+    color: #FFFFFF;
     /* Creamy color from image_93818d.jpg */
     font-size: 40px;
     margin: 10px 0;
 }
 
+.features-top-header h1 .alt-color {
+    color: #D4820A !important;
+    /* Forces the second line to display in brand gold/orange */
+}
+
 .sub-tag {
-    color: var(--accent-gold);
+    /* color: var(--accent-gold); */
+    color: #7AA93C;
     font-size: 14px;
     letter-spacing: 2px;
     font-weight: 600;
@@ -1216,7 +1308,7 @@ font-size: 2.8vw !important;
 /* Text on Purple */
 .feature-item p {
     font-size: 20px;
-    color: var(--text-on-purple);
+    color: #ffffff;
     /* Match soft white */
     font-weight: 600;
     text-transform: uppercase;
@@ -1263,7 +1355,7 @@ font-size: 2.8vw !important;
     position: relative;
     overflow: hidden;
     /* Important for shimmer */
-    background: var(--accent-gold);
+    background: #D4820A;
     color: #000;
     padding: 16px 45px;
     border-radius: 50px;
@@ -1311,13 +1403,13 @@ font-size: 2.8vw !important;
 }
 
 .brand-name {
-    color: var(--accent-gold);
+    color: var(--green);
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
 .section-title {
-    color: var(--text-on-purple);
+    color: #ffffff;
     font-size: 3rem;
     font-weight: 700;
 }
@@ -1356,11 +1448,40 @@ font-size: 2.8vw !important;
 /* --- Keep your existing CSS below this --- */
 .product-range {
     /* background: linear-gradient(rgba(61, 27, 79, 0.92), rgba(61, 27, 79, 0.9)); */
-    background-color: var(--dark-purple);
+    /* background-color: var(--dark-purple); */
+    background-color: #141409;
     padding: 80px 10%;
     font-family: 'Playfair Display', serif;
     overflow: hidden;
     /* Prevents scrollbars during animation */
+
+
+
+
+    position: relative;
+        /* ADD — needed for video positioning */
+}
+
+
+/* ADD BELOW */
+.product-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.30;
+    /* subtle — raise to 0.20 if you want more visible */
+}
+
+
+.product-range .range-header,
+.product-range .range-container {
+    position: relative;
+    z-index: 2;
+    /* keeps text & products above the video */
 }
 
 /* This creates the alternating effect */
@@ -1374,7 +1495,7 @@ font-size: 2.8vw !important;
 
 .range-text h3 {
     font-size: 2rem;
-    color: var(--white);
+    color: var(--orange);
     /* Dark blue/purple */
     margin-bottom: 20px;
     display: flex;
@@ -1384,7 +1505,7 @@ font-size: 2.8vw !important;
 
 .range-text p {
     font-family: 'Inter', sans-serif;
-    color: var(--white);
+    color: #ffffff;
     line-height: 1.8;
     margin-bottom: 30px;
     font-size: 1rem;
@@ -1393,7 +1514,7 @@ font-size: 2.8vw !important;
 /* Button Styling */
 .read-more {
     text-decoration: none;
-    color: var(--accent-gold);
+    color: var(--orange);
     font-weight: 700;
     font-size: 0.9rem;
     display: inline-flex;
@@ -1403,7 +1524,7 @@ font-size: 2.8vw !important;
 }
 
 .arrow-icon {
-    background-color: var(--vivid-purple);
+    background-color: var(--orange);
     color: white;
     width: 35px;
     height: 35px;
@@ -1528,7 +1649,8 @@ font-size: 2.8vw !important;
 
 .premium-products {
     /* background: #fdf8e9 url('assets/images/texture-bg.jpg'); */
-    background-color: var(--dark-purple);
+    /* background-color: var(--dark-purple); */
+    background-color: #141409;
     /* Light cream pattern */
     padding: 80px 5%;
     text-align: center;
@@ -1550,7 +1672,7 @@ font-size: 2.8vw !important;
 
 .sub-heading {
     /* color: #8d308e; */
-    color: var(--accent-gold);
+    color: var(--green);
     /* Brand Purple */
     font-weight: 600;
     letter-spacing: 2px;
@@ -1568,7 +1690,7 @@ font-size: 2.8vw !important;
 .header-divider {
     width: 80px;
     height: 3px;
-    background: #ffcc00;
+    background: var(--green);
     /* Accent Gold */
     margin: 0 auto;
 }
@@ -1584,7 +1706,8 @@ font-size: 2.8vw !important;
 
 .product-card {
     /* background: rgba(255, 255, 255, 0.6); */
-    background: var(--dark-purple);
+    /* background: var(--dark-purple); */
+    background: #141409;
     padding: 30px 20px;
     border-radius: 15px;
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
@@ -1599,8 +1722,10 @@ font-size: 2.8vw !important;
 }
 
 .product-card:hover {
-    background:var(--dark-purple);
-    box-shadow: 0 20px 40px rgba(61, 27, 79, 0.1);
+    /* background:var(--dark-purple); */
+        background: #222218;
+    box-shadow: 0 8px 28px rgba(212, 130, 10, 0.18);
+    border-color: rgba(212, 130, 10, 0.35);
     transform: translateY(-15px);
 }
 
@@ -1624,7 +1749,7 @@ font-size: 2.8vw !important;
 }
 
 .know-more {
-    color: var(--accent-gold);
+    color: var(--orange);
     text-decoration: none;
     font-weight: 700;
     font-size: 13px;
@@ -1673,7 +1798,8 @@ font-size: 2.8vw !important;
     position: relative;
     padding: 80px 5% 40px;
     /* background: #f8f1ff; */
-    background: #d9a5fc;
+    /* background: #d9a5fc; */
+    background: #141409;
     text-align: center;
     overflow: hidden;
 }
@@ -1716,15 +1842,16 @@ font-size: 2.8vw !important;
     background: #fff;
     border: 1px solid #e2d1f0;
     border-radius: 50px;
-    font-size: 11px;
-    font-weight: 700;
-    color: #5e337e;
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--green);
     margin-bottom: 20px;
 }
 
 .premium-title {
     font-size: 48px;
-    color: #3d1b4f;
+    /* color: #3d1b4f; */
+    color: #ffffff;
     font-weight: 800;
     margin: 0;
 }
@@ -1740,7 +1867,7 @@ font-size: 2.8vw !important;
 .title-divider .line {
     height: 1.5px;
     width: 60px;
-    background: linear-gradient(to var(--dir, right), transparent, #ffcc00);
+    background: linear-gradient(to var(--dir, right), transparent, #7AA93C, transparent);
 }
 
 .title-divider .line.left {
@@ -1752,19 +1879,19 @@ font-size: 2.8vw !important;
 }
 
 .title-divider i {
-    color: #ffcc00;
+    color: var(--green);
     font-size: 16px;
     transform: rotate(-45deg);
 }
 
 .header-desc {
-    color: #555;
+    color: #ffffff;
     font-size: 17px;
     line-height: 1.6;
 }
 
 .header-desc .highlight {
-    color: #3d1b4f;
+    color: var(--orange);
     font-weight: 700;
 }
 
@@ -1779,7 +1906,7 @@ font-size: 2.8vw !important;
     z-index: 2;
 }
 
-.cert-card {
+/* .cert-card {
     background: #ffffff;
     border-radius: 25px;
     padding: 35px 20px;
@@ -1788,10 +1915,39 @@ font-size: 2.8vw !important;
     transition: all 0.4s ease;
     cursor: pointer;
     position: relative;
+} */
+
+
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    /* Subtle depth overlay */
+    padding: 35px 25px;
+    border-radius: 25px;
+    border: 2.5px solid rgba(255, 255, 255, 0.1);
+    /* transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease; */
+    transition: all 0.4s ease;
+    position: relative;
+    /* Required for children 3D layering */
+    transform-style: preserve-3d;
 }
 
+/* --- THE HOVER 3D ANIMATION --- */
+.cert-card:hover {
+    /* Tilted 3D forward pop */
+    transform: rotateX(5deg) rotateY(-5deg) translateY(-10px) translateZ(30px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
 .cert-card.featured {
-    border-color: #ffcc00;
+    border-color: var(--orange);
     transform: translateY(-8px);
 }
 
@@ -1800,12 +1956,12 @@ font-size: 2.8vw !important;
     top: -14px;
     left: 50%;
     transform: translateX(-50%);
-    background: #ffcc00;
+    background: var(--orange);
     padding: 4px 18px;
     border-radius: 50px;
-    font-size: 10px;
-    font-weight: 800;
-    color: #3d1b4f;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
     opacity: 0;
 }
 
@@ -1869,13 +2025,13 @@ font-size: 2.8vw !important;
     transition: all 0.6s ease;
 }
 .cert-card h3 {
-    color: #3d1b4f;
+    color: var(--orange);
     font-size: 18px;
     margin-bottom: 8px;
 }
 
 .cert-card p {
-    color: #666;
+    color: #ffffff;
     font-size: 13px;
     line-height: 1.4;
     margin-bottom: 20px;
@@ -1885,7 +2041,7 @@ font-size: 2.8vw !important;
     display: inline-flex;
     padding: 6px 15px;
     background: #f0fff4;
-    color: #28a745;
+    color: var(--green);
     border-radius: 50px;
     font-size: 10px;
     font-weight: 800;
@@ -1893,8 +2049,8 @@ font-size: 2.8vw !important;
 }
 
 /* --- Features Bar (Horizontal) --- */
-.cert-features-bar {
-    background: #3d1b4f;
+/* .cert-features-bar {
+    background: var(--green);
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
@@ -1904,6 +2060,38 @@ font-size: 2.8vw !important;
     margin: 0 auto;
     position: relative;
     z-index: 2;
+} */
+
+
+
+.cert-features-bar {
+    /* 1. Transparent 3D Glass Layering */
+    background: rgba(30, 30, 14, 0.75) !important;
+    /* Dark luxury base matching your #141409 theme with 75% transparency */
+    backdrop-filter: blur(12px) !important;
+    /* Smooth glass blur effect */
+    -webkit-backdrop-filter: blur(12px) !important;
+
+    /* 2. Thin highlight border to create depth */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 3px solid #7AA93C !important;
+    /* Subtle bottom accent line in your organic green */
+    border-radius: 40px !important;
+
+    /* 3. Structural Layout */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    padding: 40px 4% !important;
+    max-width: 1350px !important;
+    margin: 40px auto !important;
+    /* Adds breathing room above and below the bar */
+    position: relative !important;
+    z-index: 10 !important;
+    box-sizing: border-box !important;
+
+    /* 4. Smooth floating 3D shadow */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
 }
 
 .feat-item {
@@ -1917,7 +2105,7 @@ font-size: 2.8vw !important;
     position: relative;
 }
 
-.feat-item:not(:last-child)::after {
+/* .feat-item:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -1925,36 +2113,43 @@ font-size: 2.8vw !important;
     height: 80%;
     width: 1px;
     background: rgba(255, 255, 255, 0.15);
+} */
+
+/* Subtle separator line between items, except the last one */
+.feat-item:not(:last-child) {
+    border-right: 2px solid #7AA93C !important;
 }
 
 .feat-icon {
     min-width: 45px;
     height: 45px;
-    border: 1px solid rgba(255, 204, 0, 0.4);
+    border: 1px solid #7AA93C;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffcc00;
+    color: var(--green);
     font-size: 18px;
 }
 
 .feat-text h4 {
     font-size: 16px;
+    letter-spacing: 2px;
     margin-bottom: 5px;
-    font-weight: 700;
+    font-weight: 500;
+    color: var(--orange);
 }
 
 .feat-text p {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
     line-height: 1.4;
     margin: 0;
 }
 
 .cert-quote {
     margin-top: 40px;
-    color: #3d1b4f;
+    color: #ffffff;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -1964,27 +2159,30 @@ font-size: 2.8vw !important;
 }
 
 .cert-quote span {
-    font-weight: 700;
-    /* Extra insurance for the span text */
+    font-weight: 600;
+    color: #ffffff;
 }
 
 /* Optional: Make the specific "never compromise" part even bolder or Gold */
 .cert-quote strong {
     /* Gold accent for the most important part of the quote */
-    font-weight: 1000;
+    font-weight: 600;
+    color: var(--orange);
 }
 
 .cert-quote i {
     font-size: 16px;
     font-weight: 800;
-    color: #ffcc00;
+    color: var(--green);
 }
 
 
 /*=======Testimonials section========*/
 .testimonials {
     padding: 100px 5%;
-    background: radial-gradient(circle at center, #7a287b 0%, var(--premium-purple), var(--dark-purple)100%);
+    /* background: radial-gradient(circle at center, #7a287b 0%, var(--premium-purple), var(--dark-purple)100%); */
+    /* background: radial-gradient(circle at center, #141409 0%, #080804 60%, #000000 100%) !important; */
+    background: #141409 !important;
     perspective: 1500px; /*crucial for 3d*/
     overflow: hidden;
 }
@@ -1995,7 +2193,7 @@ font-size: 2.8vw !important;
 }
 
 .test-header .sub-title {
-    color: var(--accent-gold);
+    color: var(--green);
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 14px;
@@ -2035,10 +2233,12 @@ font-size: 2.8vw !important;
 /*3d card*/
 
 .test-card {
-    background: rgba(255, 255, 255, 0.05);
+    /* background: rgba(255, 255, 255, 0.05); */
+    background: rgba(30, 30, 20, 0.45);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 3px solid #D4820A !important;
     padding: 40px;
     border-radius: 30px;
     position: relative;
@@ -2048,8 +2248,10 @@ font-size: 2.8vw !important;
 }
 
 .test-card:hover {
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3 );
-    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6 );
+    /* background: rgba(255, 255, 255, 0.08); */
+    background: rgba(40, 40, 25, 0.65) !important;
+        border-color: rgba(212, 130, 10, 0.2) !important;
 }
 
 /*===content layering for z-depth===*/
@@ -2060,13 +2262,13 @@ font-size: 2.8vw !important;
 
 .quote-icon {
     font-size: 40px;
-    color: var(--accent-gold);
+    color: var(--orange);
     margin-bottom: 20px;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .test-card p {
-    color: #f4f4f4;
+    color: #ffffff;
     font-style: italic;
     line-height: 1.8;
     font-size: 16px;
@@ -2083,17 +2285,17 @@ font-size: 2.8vw !important;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid var(--accent-gold);
+    border: 2px solid var(--green);
     padding: 3px;
 }
 
 .client-details h4 {
-    color: #fff;
+    color: var(--orange);
     margin-bottom: 5px;
 }
 
 .stars {
-    color: var(--accent-gold);
+    color: var(--green);
 }
 
 
@@ -2102,18 +2304,27 @@ font-size: 2.8vw !important;
 .footer {
 
 
-position:relative;
+/* position:relative;
 background: linear-gradient(rgba(61, 27, 79, 0.92), rgba(61, 27, 79, 0.9)),
 url('assets/images/background-banner\ \(1\).png');
 background-size: cover;
-background-position: center;
+background-position: center; */
 
-
+        background:
+            linear-gradient(rgba(20, 20, 9, 0.85),
+                rgba(20, 20, 9, 0.92)),
+            url('assets/images/background-banner (1).png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+            background-attachment: scroll;
+        /* background-attachment: fixed; */
+        /* gives a premium parallax depth effect */
     /* background: var(--premium-purple); */
     color: #fff;
     padding: 60px 20 0;
-    margin-top: 50px;
-    border-top: 2px solid var(--accent-gold);
+    margin-top: 0;
+    border-top: 2px solid var(--orange);
 }
 
 .footer-divider {
@@ -2122,7 +2333,7 @@ background-position: center;
     margin-bottom: 40px;
 }
 
-.footer-divider img { width: 50px; opacity: 0.8; color: var(--accent-gold); }
+.footer-divider img { width: 50px; opacity: 0.8; color: var(--orange); }
 
 /* TOP */
 .footer-top {
@@ -2134,7 +2345,7 @@ background-position: center;
 }
 
 .gold-text {
-    color: var(--accent-gold);
+    color: var(--orange);
     font-weight: bold;
 }
 
@@ -2152,7 +2363,7 @@ background-position: center;
 /* LINE */
 .footer-line {
     margin: 40px auto;
-    border: 0.5px solid var(--accent-gold);
+    border: 0.5px solid var(--green);
     width: 90%;
 }
 
@@ -2196,7 +2407,7 @@ background-position: center;
     font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--accent-gold) !important;
+    color: var(--orange) !important;
     /* Gold headers in footer */
     margin-bottom: 25px;
     font-weight: 600;
@@ -2225,7 +2436,7 @@ background-position: center;
 
 .footer-grid ul li i {
     font-size: 10px;
-    color: var(--accent-gold);
+    color: var(--orange);
 }
 
 
@@ -2233,7 +2444,7 @@ background-position: center;
 
 
 .footer-grid ul li:hover {
-    color: var(--accent-gold);
+    color: var(--orange);
     padding-left: 5px;
     /* Subtle movement on hover */
 }
@@ -2276,7 +2487,7 @@ background-position: center;
 }
 
 .contact-card :hover {
-    color: var(--accent-gold);
+    color: var(--orange);
     /*subtle change on haver*/
     text-decoration: none;
 }
@@ -2288,7 +2499,7 @@ background-position: center;
 .follow-us span {
     font-size: 12px;
     font-weight: bold;
-    color: var(--accent-gold);
+    color: var(--orange);
 }
 
 
@@ -2311,7 +2522,7 @@ background-position: center;
 }
 
 .social-icons i:hover {
-    color: var(--accent-gold);
+    color: var(--orange);
     transform: scale(1.2);
 }
 
@@ -2363,7 +2574,7 @@ background-position: center;
     color: rgba(255, 255, 255, 0.6);
 }
 .footer-bottom i {
-    color: var(--accent-gold);
+    color: var(--green);
     margin: 0 5px;
 }
 
@@ -2375,7 +2586,7 @@ background-position: center;
     width: 60px;
     /* Slightly larger for better touch target */
     height: 60px;
-    background: var(--metallic-gold);
+    background: var(--orange);
     /* The high-end gradient */
     color: #fff;
     border-radius: 50%;
@@ -3107,8 +3318,8 @@ footer-badges {
     /* Prevents moving to a second line */
     justify-content: space-between;
     /* Spreads them evenly */
-    align-items: center;
-    gap: 10px;
+    align-items: left;
+    gap: 1px;
     /* Reduced gap to fit more items */
     padding: 20px 10px;
     overflow-x: auto;
@@ -3126,18 +3337,18 @@ footer-badges {
             /* Each item takes equal space */
             min-width: 70px;
             /* Minimum width so text doesn't crush */
-            gap: 15px;
+            gap: 10px;
             /* Tighter gap between icon and text */
         }
 
                 .badge-item img {
-                    width: 25px;
+                    width: 20px;
                     /* Smaller icons to fit the row */
-                    height: 25px;
+                    height: 20px;
                 }
 
                                 .badge-item span {
-                                    font-size: 7px;
+                                    font-size: 5px;
                                     /* Smaller text size for the row */
                                     letter-spacing: 0.2px;
                                     line-height: 1.2;
