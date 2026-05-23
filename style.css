@@ -1811,7 +1811,7 @@ font-size: 2.8vw !important;
     height: 550px;
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    /* opacity: 0.; */
     z-index: 1;
     pointer-events: none;
 }
@@ -1819,13 +1819,13 @@ font-size: 2.8vw !important;
 .leaf-bg.left {
     top: 0;
     left: -50px;
-    background-image: url('assets/icons/leaf-final (2).png');
+    background-image: url('assets/icons/background-leaf.png');
 }
 
 .leaf-bg.right {
     top: 0;
     right: -50px;
-    background-image: url('assets/icons/opposite side.png');
+    background-image: url('assets/icons/right-background-leaf.png');
 }
 
 .cert-header {
@@ -1990,12 +1990,12 @@ font-size: 2.8vw !important;
     width: 230px;
     /* Adjust based on your PNG size */
     height: 230px;
-    background-image: url('assets/icons/2nd-leaf.png');
+    background-image: url('assets/icons/leaf-icon1.png');
     /* Path to your PNG */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.15;
+    opacity: 0.;
     /* Makes it subtle like the Dilip Organic design */
     z-index: 1;
 }
@@ -3219,16 +3219,16 @@ background-position: center; */
         width: 180px;
         /* Scale down decorative leaves */
         height: 300px;
-        opacity: 0.1;
+        /* opacity: 0.1; */
         /* Fade them more to avoid cluttering content */
     }
 
     .leaf-bg.left {
-        left: -10px;
+        left: -45px;
     }
 
     .leaf-bg.right {
-        right: -10px;
+        right: -45px;
     }
 
     .premium-title {
@@ -3259,7 +3259,7 @@ background-position: center; */
     }
 
     .cert-icon-wrapper::before {
-        width: 200px;
+        width: 270px;
         /* Resize the wreath for mobile cards */
         height: 160px;
     }
