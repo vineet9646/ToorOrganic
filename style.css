@@ -340,6 +340,43 @@ button {
         padding: 4px;
     }
 
+
+.floating-logo {
+    position: fixed;
+    right: 3px;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 998;
+    width: 70px;
+    /* ✅ Bigger size */
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+    /* ✅ Luxury dark glass background - visible on ANY section */
+    background: radial-gradient(circle at center,
+            rgba(20, 20, 9, 0.75) 0%,
+            rgba(10, 10, 5, 0.88) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    /* ✅ Premium layered border glow */
+    border: 2.5px solid #D4820A;
+    box-shadow:
+        0 0 0 1px rgba(212, 130, 10, 0.2),
+        0 0 18px rgba(212, 130, 10, 0.35),
+        0 8px 32px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    /* ✅ Smooth transition */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
     .floating-logo:hover {
         width: 80px;
         height: 80px;
