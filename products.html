@@ -5,30 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toor Organic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
-
+    <!-- anything testttt -->
     <header class="navbar">
         <div class="container">
 
             <!-- LOGO -->
             <div class="logo">
-                <img src="assets/images/toor-organic-logo(1).png" alt="Toor Organic Logo">
+                <a href="index.html">
+                    <img src="assets/images/toor-organic-logo(1).png" alt="Toor Organic Logo">
+                </a>
             </div>
 
             <!-- NAV MENU -->
             <nav class="nav-links" id="navLinks">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About Us</a></li>
 
                     <!-- DROPDOWN -->
                     <li class="dropdown">
-                        <a href="#">Product ▾</a>
+                        <a href="#" class="dropdown-toggle">Our Products <i class="fa-solid fa-chevron-down"></i></a>
+                        <!-- <a href="#">Our Products ▾</a> -->
                         <ul class="dropdown-menu">
 
                             <li><a href="products.html">Basmati Rice</a></li>
@@ -36,12 +46,16 @@
                         </ul>
                     </li>
 
-                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Why Organic</a></li>
+                    <li><a href="#">Gallery</a></li>
                     <li><a href="#">Blogs</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
 
                     <li class="nav-cta">
-                        <a href="#" class="order-btn">Order Now</a>
+                        <!-- <a href="contact.html" class="order-btn">Order Now</a> -->
+                        <a href="tel:+917065678900" class="order-btn phone-nav-btn">
+                            <i class="fa-solid fa-phone"></i> +91 70656 78900
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -52,13 +66,19 @@
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-solid fa-xmark" style="display: none;"></i>
             </div>
-
-            <!-- <div class="menu-toggle" id="menuToggle">
-                ☰
-            </div> -->
-
         </div>
     </header>
+
+
+    <!-- Fixed Floating Logo -->
+    <div class="floating-logo">
+        <img src="assets/images/toor_organic_trade logo.png" alt="Toor Organic Logo">
+    </div>
+
+    <div class="floating-whatsapp">
+        <img src="assets/images/logo.png" alt="Toor Organic Logo">
+    </div>
+
 
 
 
@@ -73,7 +93,8 @@
     <div class="catalog-grid">
         <div class="product-item range-row">
             <div class="product-card-top">
-                <i class="fa-regular fa-gem diamond-icon"></i>
+                <!-- <i class="fa-regular fa-gem diamond-icon"></i> -->
+                <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
                 <h3>Authentic Basmati Rice</h3>
                 <p>Toor Organic Classic Gold Basmati Rice</p>
                 <a href="#" class="read-more-link">READ MORE</a>
@@ -86,7 +107,7 @@
 
         <div class="product-item range-row">
             <div class="product-card-top">
-                <i class="fa-regular fa-gem diamond-icon"></i>
+                <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
                 <h3>Traditional Range</h3>
                 <p>Toor Organic Traditional Authentic Basmati Rice</p>
                 <a href="#" class="read-more-link">READ MORE</a>
@@ -99,7 +120,7 @@
 
         <div class="product-item range-row">
             <div class="product-card-top">
-                <i class="fa-regular fa-gem diamond-icon"></i>
+                <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
                 <h3>Traditional Range</h3>
                 <p>Toor Organic Royale Pulao Basmati Rice</p>
                 <a href="#" class="read-more-link">READ MORE</a>
@@ -113,7 +134,7 @@
 
 <div class="product-item range-row">
     <div class="product-card-top">
-        <i class="fa-regular fa-gem diamond-icon"></i>
+        <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
         <h3>Traditional Range</h3>
         <p>Toor Organic Traditional Authentic Basmati Rice</p>
         <a href="#" class="read-more-link">READ MORE</a>
@@ -126,7 +147,7 @@
 
 <div class="product-item range-row">
     <div class="product-card-top">
-        <i class="fa-regular fa-gem diamond-icon"></i>
+        <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
         <h3>Traditional Range</h3>
         <p>Toor Organic Traditional Authentic Basmati Rice</p>
         <a href="#" class="read-more-link">READ MORE</a>
@@ -139,7 +160,7 @@
 
 <div class="product-item range-row">
     <div class="product-card-top">
-        <i class="fa-regular fa-gem diamond-icon"></i>
+        <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
         <h3>Traditional Range</h3>
         <p>Toor Organic Traditional Authentic Basmati Rice</p>
         <a href="#" class="read-more-link">READ MORE</a>
@@ -152,7 +173,7 @@
 
 <div class="product-item range-row">
     <div class="product-card-top">
-        <i class="fa-regular fa-gem diamond-icon"></i>
+        <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
         <h3>Traditional Range</h3>
         <p>Toor Organic Traditional Authentic Basmati Rice</p>
         <a href="#" class="read-more-link">READ MORE</a>
@@ -165,7 +186,7 @@
 
 <div class="product-item range-row">
     <div class="product-card-top">
-        <i class="fa-regular fa-gem diamond-icon"></i>
+        <img src="assets/icons/icons8-sheaf-of-rice-50.png" alt="Leaf Icon" class="heading-inline-icon">
         <h3>Traditional Range</h3>
         <p>Toor Organic Traditional Authentic Basmati Rice</p>
         <a href="#" class="read-more-link">READ MORE</a>

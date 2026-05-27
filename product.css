@@ -11,7 +11,6 @@
     --dark-purple1: #5e1d5f;
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
-    --glass: rgba(255, 255, 255, 0.8); 
     --accent-gold1: #FFD700;
     --text-light: #f4f4f4;
     --metallic-gold: #D4AF37;
@@ -20,6 +19,62 @@
     /* Soft off-white for text on purple */
     --metallic-gold: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
     --gold-shadow: 0 10px 30px rgba(184, 134, 11, 0.4);
+    --green: #7AA93C;
+    --orange: #D4820A;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* This stops the manual sliding */
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    /* Subtle mesh gradient background gives 3D depth */
+    /* background: radial-gradient(circle at top left, #ffffff, #150319, #e9d5ff); */
+    background-attachment: fixed;
+    color: #333;
+}
+
+
+/* All headings default to Playfair Display */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Spans inside headings must inherit the heading font */
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+    font-family: inherit;
+}
+
+/* All body text defaults to Inter */
+p,
+a,
+li,
+span,
+label,
+input,
+button {
+    font-family: 'Inter', sans-serif;
 }
 /* Smooth fade for image swap */
 #mainProductImage {
@@ -29,7 +84,7 @@
 
 
 .product-page {
-    background-color: #fdfaf0;
+    background-color: #ffffff;
     /* Light cream background */
     padding: 120px 5% 60px;
     font-family: 'Inter', sans-serif;
@@ -39,8 +94,10 @@
 .product-detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 170px 5% 60px;
+    background: #ffffff;
     gap: 60px;
-    max-width: 1400px;
+    max-width: auto;
     margin: 0 auto;
 }
 
@@ -83,7 +140,7 @@
 }
 
 .thumbnails img.active {
-    border-color: var(--accent-gold);
+    border-color: var(--orange);
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
 }
 
@@ -91,14 +148,14 @@
 .product-title {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
-    color: var(--premium-purple);
+    color: var(--orange);
     margin-bottom: 10px;
 }
 
 .product-subtitle {
     font-size: 1.2rem;
-    color: #666;
-    font-weight: 500;
+    color: var(--green);
+    font-weight: 700;
     margin-bottom: 25px;
 }
 
@@ -121,10 +178,10 @@
 /* Normal State: White background, Purple text */
 .size-btn {
     padding: 10px 25px;
-    border: 1px solid var(--premium-purple);
+    border: 1px solid var(--orange);
     background: #ffffff !important;
     /* Forces background to be white */
-    color: var(--premium-purple) !important;
+    color: var(--orange) !important;
     /* Forces text to be purple */
     cursor: pointer;
     font-weight: 600;
@@ -133,18 +190,18 @@
 
 /* Active State: Purple background, White text */
 .size-btn.active {
-    background: var(--premium-purple) !important;
+    background: #000000 !important;
     /* Purple when selected */
     color: #ffffff !important;
     /* White text when selected */
-    border-color: var(--premium-purple);
+    border-color: var(--orange) !important;
 }
 
 /* Hover State: Only happens on buttons that ARE NOT active */
 .size-btn:hover:not(.active) {
-    background: var(--light-lavender) !important;
+    background: var(--orange) !important;
     /* Light tint on hover */
-    color: var(--premium-purple) !important;
+    color: #ffffff !important;
 }
 /* Container styling */
 .purchase-actions {
@@ -252,16 +309,18 @@
 .trust-indicators {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    background: #ffffff;
     gap: 20px;
-    max-width: 1400px;
-    margin: 80px auto 0;
+    max-width: auto;
+    margin: 0px auto 0;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .indicator .icon-box {
     width: 70px;
     height: 70px;
-    background: var(--premium-purple);
+    background: #ffffff;
     color: var(--accent-gold);
     border-radius: 50%;
     display: flex;
@@ -305,10 +364,10 @@
     /* background-color: #f3e9cc; */
     /* Exact cream color from reference */
 /* background: linear-gradient(135deg, #1a0a2e 0%, #2d1245 50%, #1a0a2e 100%); */
-background: #d9a5fc;
+background: #ffffff;
 
         /* Lighter, cleaner cream for luxury feel */
-    padding: 100px 5%;
+    padding: 180px 5%;
     font-family: 'Playfair Display', serif;
     text-align: center;
     margin-bottom: -50px;
@@ -321,7 +380,7 @@ background: #d9a5fc;
 .main-title {
     font-size: 3.5rem;
     /* color: #D4AF37; */
-    color: var(--premium-purple);
+    color: var(--orange);
     /* Deep Maroon/Purple */
     margin-bottom: 10px;
     
@@ -330,7 +389,8 @@ background: #d9a5fc;
 .sub-title {
     font-size: 1.3rem;
     /* color: rgba(248, 241, 255, 0.65); */
-    color: #5E2A74;
+    color: var(--green);
+    font-weight: 700;
     font-style: italic;
     opacity: 0.9;
 }
@@ -348,11 +408,11 @@ background: #d9a5fc;
 .product-item {
     /* background: rgba(255, 255, 255, 0.4); */
     /* background: var(--premium-purple); */
-background: linear-gradient(145deg, #4a2260 0%, #2a1236 100%);
-    /* background: rgba(255, 255, 255, 0.05); */
-        backdrop-filter: blur(10px);
-    /* Glassmorphism effect */
-    border: 1px solid rgba(212, 175, 55, 0.25);
+background: rgba(30, 30, 14, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 3px solid #7AA93C !important;
     border-radius: 15px;
     padding: 40px 20px;
     transition: all 0.4s ease;
@@ -370,7 +430,7 @@ background: linear-gradient(145deg, #4a2260 0%, #2a1236 100%);
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    background: linear-gradient(90deg, transparent, #D4820A, transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -378,7 +438,7 @@ background: linear-gradient(145deg, #4a2260 0%, #2a1236 100%);
 .product-item:hover {
     background: linear-gradient(145deg, #5e2a7a 0%, #3d1b4f 100%);
         /* ✅ slightly lighter purple */
-        border-color: rgba(212, 175, 55, 0.7);
+        border-color: #D4820A !important;
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(109, 27, 50, 0.1);
 }
@@ -391,29 +451,32 @@ background: linear-gradient(145deg, #4a2260 0%, #2a1236 100%);
 
 
 /* --- Typography & Elements --- */
-.diamond-icon {
+/* .diamond-icon {
     color: #D4AF37;
-    /* Dark Blue icon */
+   
     font-size: 1.8rem;
     margin-bottom: 15px;
-}
+} */
 
 .product-card-top h3 {
     font-size: 1.6rem;
-    color: #f8f1ff;
+    /* color: #f8f1ff; */
+    color: var(--orange);
     margin-bottom: 8px;
 }
 
 .product-card-top p {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-color: rgba(248, 241, 255, 0.65);
+/* color: rgba(248, 241, 255, 0.65); */
+color: #ffffff;
     margin-bottom: 20px;
 }
 
 .read-more-link {
     text-decoration: underline;
-    color: #D4AF37;
+    /* color: #D4AF37; */
+    color: var(--green);
     font-weight: 700;
     font-size: 0.85rem;
     letter-spacing: 1px;
@@ -477,8 +540,8 @@ background: rgba(212, 175, 55, 0.08);
 /* contact us */
 
 .contact-page {
-    background: var(--light-lavender);
-    padding: 120px 5% 80px;
+    background: #ffffff;
+    padding: 190px 5% 80px;
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
 }
@@ -491,11 +554,12 @@ background: rgba(212, 175, 55, 0.08);
 .premium-title {
     font-family: 'Playfair Display', serif;
     font-size: 4rem;
-    color: var(--premium-purple);
+    color: var(--orange);
 }
 
 .premium-subtitle {
-    color: #666;
+    color: var(--green);
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
@@ -525,7 +589,7 @@ background: rgba(212, 175, 55, 0.08);
 }
 
 .contact-link:hover {
-    color: var(--vivid-purple);
+    color: var(--orange);
     /*subtle change on haver*/
     text-decoration: none;
 }
@@ -544,8 +608,12 @@ background: rgba(212, 175, 55, 0.08);
 .icon-box {
     width: 50px;
     height: 50px;
-    background: var(--premium-purple);
-    color: var(--accent-gold);
+    background: rgba(30, 30, 14, 0.75) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-bottom: 3px solid #7AA93C !important;
+    color: var(--orange);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -555,7 +623,7 @@ background: rgba(212, 175, 55, 0.08);
 }
 
 .info-card h3 {
-    color: var(--premium-purple);
+    color: var(--orange);
     margin-bottom: 10px;
     font-family: 'Playfair Display';
 }
@@ -563,7 +631,11 @@ background: rgba(212, 175, 55, 0.08);
 /*floating query form*/
 
 .query-section {
-    background: var(--premium-purple);
+    background: rgba(30, 30, 14, 0.75) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-bottom: 3px solid #7AA93C !important;
     padding: 50px;
     border-radius: 30px;
     box-shadow: 0 25px 50px rgba(61, 27, 79, 0.3);
@@ -574,7 +646,7 @@ background: rgba(212, 175, 55, 0.08);
     font-family: 'Playfair Display';
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--accent-gold);
+    color: var(--orange);
 }
 
 .input-group {
@@ -599,7 +671,7 @@ background: rgba(212, 175, 55, 0.08);
     position: absolute;
     top: 15px;
     left: 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.978);
     pointer-events: none;
     transition: 0.3s;
 }
@@ -611,16 +683,16 @@ background: rgba(212, 175, 55, 0.08);
 {
 top: -15px;
 font-size: 0.8rem;
-color: var(--accent-gold);
+color: var(--orange);
 }
 
 .submit-btn {
     width: 100%;
     padding: 18px;
-    background: var(--accent-gold);
+    background: var(--orange);
     border: none;
     border-radius: 10px;
-    color: var(--premium-purple);
+    color: #ffffff;
     font-weight: 800;
     font-size: 1rem;
     cursor: pointer;
@@ -632,6 +704,7 @@ color: var(--accent-gold);
 
 .submit-btn:hover {
     background: white;
+    color: var(--green);
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

@@ -83,7 +83,8 @@ button {
     /* Reduced width for floating effect */
     margin: 0 auto;
     /* background: rgba(141, 48, 142, 0.8); */
-    background: #0D0D07;
+    /* background: #0D0D07; */
+    background: #ffffff;
     /* background: rgba(13, 13, 7, 0.997) !important; */
     /* Semi-transparent */
     backdrop-filter: blur(15px);
@@ -116,12 +117,39 @@ button {
     padding: 0 4%;
 }
 
+
+
+/* LOGO WRAPPER — adds a soft background glow behind the logo */
+.logo {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 75%);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+
 /* LOGO */
 .logo img {
     height: 120px;
     /* adjust if needed */
     object-fit: contain;
+    filter:
+        /* Layered drop-shadow for 3D luxury depth */
+                drop-shadow(0px 0px 1px rgba(0, 0, 0, 1))
+                    /* pixel-tight black outline */
+                    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.95))
+                    /* sharp crisp edge */
+                    drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.70))
+                    /* strong mid-depth */
+                    drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.40));
+                    /* deep ambient lift */
+                    /* drop-shadow(0px 0px 12px rgba(19, 12, 1, 0.25)); */
+                    /* warm gold aura */
+                
+                    transition: filter 0.4s ease, transform 0.4s ease;
 }
+
+
+
 
 /* NAV LINKS */
 .nav-links ul {
@@ -137,7 +165,8 @@ button {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: #000000;
     font-size: 15px;
     letter-spacing: 1px;
     transition: 0.3s;
@@ -155,7 +184,8 @@ button {
     top: 40px;
     left: 0;
     /* background: #8D308E; */
-    background: #0D0D07;
+    /* background: #0D0D07; */
+    background: #ffffff;
     min-width: 160px;
     display: none;
     flex-direction: column;
@@ -203,7 +233,8 @@ button {
 }
 
 .phone-nav-btn {
-    background-color: #0D0D07 !important;
+    /* background-color: #0D0D07 !important; */
+    background-color: #ffffff !important;
     color: #D4820A !important;
     /* Elegant black contrast text */
     padding: 10px 22px;
@@ -240,41 +271,15 @@ button {
 }
 
 
-/* .order-btn {
-    background-color: #D4820A;
-    color: #000 !important; 
-    padding: 12px 25px;
-    border-radius: 50px; 
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1.5px;
-    transition: all 0.3 ease; */
-    /* box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); */
-    /* box-shadow: #D4820A;
-    border: 2px solid transparent;
-} */
-
-/* Hover effect */
-/* .order-btn:hover {
-    background: transparent;
-    color: var(--accent-gold) !important;
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
-    transform: translateY(-2px);
-} */
-
-
-/* Fixed Floating Logo - Right Side */
-/* Fixed Floating Logo - Right Side */
 .floating-logo {
     position: fixed;
     right: 25px;
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
     z-index: 998;
-    width: 150px;
+    width: 70px;
     /* ✅ Bigger size */
-    height: 150px;
+    height: 70px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -314,8 +319,8 @@ button {
 
 /* ✅ Hover: glows and grows */
 .floating-logo:hover {
-    width: 195px;
-    height: 195px;
+    width: 140px;
+    height: 140px;
     border-color: #7AA93C;
     box-shadow:
         0 0 0 2px rgba(122, 169, 60, 0.25),
@@ -333,12 +338,6 @@ button {
 
 /* ✅ Mobile */
 @media (max-width: 768px) {
-    .floating-logo {
-        width: 70px;
-        height: 70px;
-        right: 12px;
-        padding: 4px;
-    }
 
 
 .floating-logo {
@@ -382,6 +381,90 @@ button {
         height: 80px;
     }
 }
+
+
+
+
+
+
+
+
+.floating-whatsapp {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 998;
+    width: 70px;
+    /* ✅ Bigger size */
+    height: 70px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    /* ✅ Smooth transition */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-whatsapp img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    /* border-radius: 50%; */
+    /* filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)); */
+    transition: transform 0.4s ease;
+}
+
+/* ✅ Hover: glows and grows */
+.floating-whatsapp:hover {
+    width: 80px;
+    height: 80px;
+    border-color: #7AA93C;
+}
+
+.floating-whatsapp:hover img {
+    transform: scale(1.05) rotate(3deg);
+}
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+
+    .floating-whatsapp {
+        position: fixed;
+        right: 3px;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 998;
+        width: 70px;
+        /* ✅ Bigger size */
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+
+        /* ✅ Smooth transition */
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floating-whatsapp:hover {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+
+
 
 /* --- HERO SLIDER CORE --- */
 .slider {
@@ -969,7 +1052,10 @@ font-size: 2.8vw !important;
 ========================================== */
 .editorial-about-section {
     /* background-color: #0B0B05; */
-    background: #141409;
+    /* background: #141409; */
+
+
+    background: #ffffff;
     /* True matching dark luxury base background */
     padding: 80px 4%;
     width: 100%;
@@ -1022,7 +1108,8 @@ font-size: 2.8vw !important;
 .editorial-title {
     font-family: 'Playfair Display', serif;
     font-size: 38px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: var(--green);
     line-height: 1.2;
     font-weight: 600;
     margin-bottom: 15px;
@@ -1042,8 +1129,10 @@ font-size: 2.8vw !important;
 
 .editorial-text {
     font-family: 'Inter', sans-serif;
-    color: rgba(255, 255, 255, 0.75);
-    /* Soft white reading contrast */
+    /* color: rgba(255, 255, 255, 0.75); */
+
+    color: #000000;
+    /* Soft black reading contrast */
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -1052,7 +1141,9 @@ font-size: 2.8vw !important;
 
 .editorial-btn {
     border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+
+    color: #D4820A;
     text-decoration: none;
     padding: 10px 24px;
     font-size: 12px;
@@ -1102,14 +1193,16 @@ font-size: 2.8vw !important;
 }
 
 .feature-sub {
-    color: rgba(255, 255, 255, 0.5);
+    /* color: rgba(255, 255, 255, 0.5); */
+    color: #000000;
     font-size: 12px;
     text-transform: capitalize;
 }
 
 .feature-main {
     font-family: 'Playfair Display', serif;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color:#000000;
     font-size: 20px;
     font-weight: 600;
     margin: 2px 0 0 0;
@@ -1191,14 +1284,14 @@ font-size: 2.8vw !important;
         }
 
                 .feature-sub {
-                    color: rgba(255, 255, 255, 0.5);
+                    color: #000000;
                     font-size: 10px;
                     text-transform: capitalize;
                 }
         
                 .feature-main {
                     font-family: 'Playfair Display', serif;
-                    color: #FFFFFF;
+                    color: #000000;
                     font-size: 15px;
                     font-weight: 600;
                     margin: 2px 0 0 0;
@@ -1213,7 +1306,9 @@ font-size: 2.8vw !important;
 .features {
     /* background: var(--premium-purple); */
     /* background: linear-gradient(to bottom, var(--premium-purple), var(--dark-purple)); */
-    background: #141409;
+    /* background: #141409; */
+
+    background: #ffffff;
     padding: 100px 5% 150px;
     /* padding: 30px 5%; */
     /* Increased padding for better flow */
@@ -1337,7 +1432,8 @@ font-size: 2.8vw !important;
 }
 
 .features-top-header h1 {
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: #000000;
     /* Creamy color from image_93818d.jpg */
     font-size: 40px;
     margin: 10px 0;
@@ -1423,7 +1519,8 @@ font-size: 2.8vw !important;
 /* Text on Purple */
 .feature-item p {
     font-size: 20px;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
     /* Match soft white */
     font-weight: 600;
     text-transform: uppercase;
@@ -1440,14 +1537,17 @@ font-size: 2.8vw !important;
 .features-content {
     max-width: 900px;
     margin: 80px auto 0;
-    color: #fff;
+    /* color: #fff; */
+    color: #000000;
 }
 
 
 
 .features-content h2 {
     font-size: 45px;
-    color: #fff;
+    /* color: #fff; */
+    /* color: #000000; */
+    color: var(--green);
     margin-bottom: 5px;
     font-weight: 700;
 }
@@ -1457,7 +1557,8 @@ font-size: 2.8vw !important;
 
 .features-content p {
     font-size: 17px;
-    color: rgba(255, 255, 255, 0.8);
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: #000000;
     margin-bottom: 40px;
     line-height: 1.6;
 }
@@ -1765,7 +1866,8 @@ font-size: 2.8vw !important;
 .premium-products {
     /* background: #fdf8e9 url('assets/images/texture-bg.jpg'); */
     /* background-color: var(--dark-purple); */
-    background-color: #141409;
+    /* background-color: #141409; */
+    background-color: #FFFFFF;
     /* Light cream pattern */
     padding: 80px 5%;
     text-align: center;
@@ -1798,7 +1900,8 @@ font-size: 2.8vw !important;
 .main-heading {
     font-family: 'Playfair Display', serif;
     font-size: 48px;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: var(--orange);
     margin: 10px 0;
 }
 
@@ -1822,14 +1925,25 @@ font-size: 2.8vw !important;
 .product-card {
     /* background: rgba(255, 255, 255, 0.6); */
     /* background: var(--dark-purple); */
-    background: #141409;
+    /* background: #141409; */
+    background: rgba(30, 30, 14, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 3px solid #7AA93C !important;
     padding: 30px 20px;
     border-radius: 15px;
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     opacity: 0;
     transform: scale(0.8) translateY(50px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
 }
+
+
+
+
+
 
 .product-card.reveal {
     opacity: 1;
@@ -1914,7 +2028,8 @@ font-size: 2.8vw !important;
     padding: 80px 5% 40px;
     /* background: #f8f1ff; */
     /* background: #d9a5fc; */
-    background: #141409;
+    /* background: #141409; */
+    background: #ffffff;
     text-align: center;
     overflow: hidden;
 }
@@ -1966,7 +2081,9 @@ font-size: 2.8vw !important;
 .premium-title {
     font-size: 48px;
     /* color: #3d1b4f; */
-    color: #ffffff;
+    /* color: #ffffff; */
+    /* color: #000000; */
+    color: var(--orange);
     font-weight: 800;
     margin: 0;
 }
@@ -2000,7 +2117,8 @@ font-size: 2.8vw !important;
 }
 
 .header-desc {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
     font-size: 17px;
     line-height: 1.6;
 }
@@ -2146,7 +2264,8 @@ font-size: 2.8vw !important;
 }
 
 .cert-card p {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
     font-size: 13px;
     line-height: 1.4;
     margin-bottom: 20px;
@@ -2275,7 +2394,8 @@ font-size: 2.8vw !important;
 
 .cert-quote span {
     font-weight: 600;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
 }
 
 /* Optional: Make the specific "never compromise" part even bolder or Gold */
@@ -2297,7 +2417,8 @@ font-size: 2.8vw !important;
     padding: 100px 5%;
     /* background: radial-gradient(circle at center, #7a287b 0%, var(--premium-purple), var(--dark-purple)100%); */
     /* background: radial-gradient(circle at center, #141409 0%, #080804 60%, #000000 100%) !important; */
-    background: #141409 !important;
+    /* background: #141409 !important; */
+    background: #ffffff !important;
     perspective: 1500px; /*crucial for 3d*/
     overflow: hidden;
 }
@@ -2316,7 +2437,8 @@ font-size: 2.8vw !important;
 }
 
 .test-header h2 {
-    color: #fff;
+    /* color: #fff; */
+    color: #000000;
     font-size: 42px;
     margin-top: 10px;
 }
@@ -2425,10 +2547,14 @@ url('assets/images/background-banner\ \(1\).png');
 background-size: cover;
 background-position: center; */
 
-        background:
+        /* background:
             linear-gradient(rgba(20, 20, 9, 0.85),
                 rgba(20, 20, 9, 0.92)),
-            url('assets/images/background-banner (1).png');
+            url('assets/images/background-banner (1).png'); */
+            background:
+                    linear-gradient(rgba(246, 246, 241, 0.85),
+                        rgba(251, 251, 233, 0.92)),
+                    url('assets/images/background-banner (1).png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -2436,7 +2562,8 @@ background-position: center; */
         /* background-attachment: fixed; */
         /* gives a premium parallax depth effect */
     /* background: var(--premium-purple); */
-    color: #fff;
+    /* color: #fff; */
+    color: #000000;
     padding: 60px 20 0;
     margin-top: 0;
     border-top: 2px solid var(--orange);
@@ -2464,15 +2591,50 @@ background-position: center; */
     font-weight: bold;
 }
 
-.footer-logo {
+/* .footer-logo {
     height: 100px;
     margin-bottom: 20px;
+} */
+
+
+
+
+
+.footer-top {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 75%);
+    border-radius: 50%;
+    padding: 4px;
 }
+
+
+/* LOGO */
+.footer-logo {
+    height: 180px;
+    /* adjust if needed */
+    object-fit: contain;
+    filter:
+        /* Layered drop-shadow for 3D luxury depth */
+        drop-shadow(0px 0px 1px rgba(0, 0, 0, 1))
+        /* pixel-tight black outline */
+        drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.95))
+        /* sharp crisp edge */
+        drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.70))
+        /* strong mid-depth */
+        drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.40));
+    /* deep ambient lift */
+    /* drop-shadow(0px 0px 12px rgba(19, 12, 1, 0.25)); */
+    /* warm gold aura */
+
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+
 
 .footer-desc {
     font-size: 17px;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.8);
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: #000000;
 }
 
 /* LINE */
@@ -2541,11 +2703,13 @@ background-position: center; */
     /* font-weight: 400; */
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 12px;
         cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    gap: 8px;
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: #000000;
+    letter-spacing: 1px;
+    gap: 10px;
     transition: 0.3s;
 }
 
@@ -2560,7 +2724,7 @@ background-position: center; */
 
 .footer-grid ul li:hover {
     color: var(--orange);
-    padding-left: 5px;
+    padding-left: 50px;
     /* Subtle movement on hover */
 }
 
@@ -2666,7 +2830,7 @@ background-position: center; */
 
 .badge-item img {
     width: 45px;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
     opacity: 0.8;
 }
 
@@ -2686,7 +2850,8 @@ background-position: center; */
     padding: 20px;
     text-align: center;
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--orange);
+    font-weight: 700;
 }
 .footer-bottom i {
     color: var(--green);
@@ -2972,7 +3137,7 @@ background-position: center; */
         height: 100vh;
         /* Premium Purple Glass Effect */
         /* background: rgba(141, 48, 142, 0.8); */
-        background: #0D0D07;
+        background: #ffffff;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-left: 1px solid rgba(255, 255, 255, 0.2);
