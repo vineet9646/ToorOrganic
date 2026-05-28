@@ -2794,15 +2794,25 @@ background-position: center; */
     gap: 15px;
 }
 
+.social-icons a,
 .social-icons i {
+    color: #333333 !important;
+    /* Neutral dark grey matching your footer body text */
+    text-decoration: none !important;
+    /* Removes any accidental link underlines */
     font-size: 18px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
+/* LUXURY HOVER STATE */
+.social-icons a:hover i,
 .social-icons i:hover {
-    color: var(--orange);
-    transform: scale(1.2);
+    color: #D4820A !important;
+    /* Smoothly transitions to your brand orange/gold on hover */
+    transform: translateY(-3px) scale(1.1);
+    /* Adds an elegant upward 3D lift instead of just scaling */
 }
 
 
