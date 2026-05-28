@@ -3392,6 +3392,26 @@ background-position: center; */
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+        .divider-line-left,
+        .divider-line-right {
+            width: 25px;
+            /* Sets a fixed, uniform premium length for the solid lines */
+            height: 2px;
+            /* Precise thickness matching your layout's top ornament lines */
+            background-color: #7AA93C !important;
+            /* Solid organic green fill with zero gaps */
+            display: block;
+        }
+
+                .divider-icon {
+                    width: 15px;
+                    height: 15px;
+                    object-fit: contain;
+                    display: block;
+                    opacity: 1;
+                }
+
+
     /* Shrinks the icons to match the smaller box */
     .feature-item img {
         width: 80px;
