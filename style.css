@@ -2719,7 +2719,21 @@ background-position: center; */
 }
 
 
+.footer-grid ul li a {
+text-decoration: none;
+    /* Removes the underline */
+    color: inherit;
 
+    transition: color 0.3s ease;
+    /* Makes the color change smooth */
+    display: inline-block;
+    cursor: pointer;
+}
+
+.footer-grid ul li i {
+    font-size: 10px;
+    color: var(--orange);
+}
 
 
 .footer-grid ul li:hover {
