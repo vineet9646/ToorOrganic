@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (navbar) {
             if (window.scrollY > 50) {
                 // Keep the deep dark background color on scroll instead of changing to purple
-                navbar.style.background = "#ffffff";
+                navbar.style.background = "rgba(20, 12, 3, 0.45)"; // Maintains the deep dark background color on scroll
                 navbar.style.padding = "8px 0"; // Keeps the sticky navbar slim on scroll
             } else {
                 navbar.style.padding = "15px 0"; // Returns to spacious default padding at top
