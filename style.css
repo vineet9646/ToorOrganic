@@ -164,7 +164,7 @@ button {
     height: 120px;
 
     object-fit: contain;
-    filter:
+    /* filter: */
                 /* drop-shadow(0px 0px 1px rgba(0, 0, 0, 1))
 
                     drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.95))
@@ -390,16 +390,16 @@ button {
     background: radial-gradient(circle at center,
             rgba(20, 20, 9, 0.75) 0%,
             rgba(10, 10, 5, 0.88) 100%);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    /* backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px); */
 
     /* ✅ Premium layered border glow */
     border: 2.5px solid #D4820A;
-    box-shadow:
+    /* box-shadow:
         0 0 0 1px rgba(212, 130, 10, 0.2),
         0 0 18px rgba(212, 130, 10, 0.35),
         0 8px 32px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        inset 0 1px 0 rgba(255, 255, 255, 0.08); */
 
     /* ✅ Smooth transition */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1008,7 +1008,7 @@ font-size: 2.0vw !important;
 }
     /* 1. Recalibrate Layout Placement */
     .hero-overlay {
-        padding-top: 170px !important;
+        padding-top: 160px !important;
         /* Locks text precisely below your transparent navbar */
     }
 
@@ -1023,21 +1023,21 @@ font-size: 2.0vw !important;
     .hero-badge {
         font-size: 10px !important;
         letter-spacing: 1px !important;
-        margin-bottom: 4px !important;
+        margin-bottom: -5px !important;
     }
 
     .premium-heading {
         font-size: 15px !important;
         /* Locked size keeps it crisp and avoids vertical stretching */
         line-height: 1.1 !important;
-        margin-bottom: 6px !important;
+        margin-bottom: -20px !important;
     }
 
     .hero-desc {
-        font-size: 11px !important;
-        line-height: 1.35 !important;
+        font-size: 8px !important;
+        line-height: 1.0 !important;
         max-width: 100% !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 3px !important;
     }
 
   
@@ -1048,8 +1048,8 @@ font-size: 2.0vw !important;
         flex-direction: column !important;
         /* Keeps them side-by-side to save vertical space */
         align-items: flex-start !important;
-        gap: 15px !important;
-        margin-top: 0 !important;
+        gap: 5px !important;
+        margin-top: 2px !important;
     }
 
     .btn-primary {
@@ -1069,18 +1069,18 @@ font-size: 2.0vw !important;
 
 
 /* --- 1. Organic Wave Styling --- */
-.wave-container {
+/* .wave-container {
     width: 100%;
     line-height: 0;
     background: #f8f1ff;
-    /* Matches your slider background */
+
 }
 
 .wave-container svg {
     display: block;
     width: 100%;
     height: auto;
-}
+} */
 
 
 
@@ -3228,10 +3228,11 @@ text-decoration: none;
     }
 
     .nav-links ul li a {
-        font-size: 18px;
-        letter-spacing: 1.5px;
+        font-size: 14px;
+        letter-spacing: 1.0px;
         padding: 1px 0;
         display: block;
+        color: #000000;
     }
 
     .nav-links ul li:not(:last-child) {
@@ -3671,7 +3672,7 @@ text-decoration: none;
         grid-template-columns: 1fr;
     }
 
-footer-badges {
+.footer-badges {
     display: flex;
     flex-direction: row;
     /* Forces horizontal alignment */
