@@ -303,12 +303,12 @@ button {
 .floating-logo {
     position: fixed;
     right: 25px;
-    top: 35%;
+    top: 42%;
     transform: translateY(-50%);
     z-index: 998;
-    width: 130px;
+    width: 110px;
     /* ✅ Bigger size */
-    height: 130px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -421,7 +421,7 @@ button {
 .floating-whatsapp {
     position: fixed;
     right: 25px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     z-index: 998;
     width: 70px;
