@@ -2578,18 +2578,6 @@ font-size: 2.0vw !important;
 /* --------------footer -------------------------*/
 
 .footer {
-
-
-/* position:relative;
-background: linear-gradient(rgba(61, 27, 79, 0.92), rgba(61, 27, 79, 0.9)),
-url('assets/images/background-banner\ \(1\).png');
-background-size: cover;
-background-position: center; */
-
-        /* background:
-            linear-gradient(rgba(20, 20, 9, 0.85),
-                rgba(20, 20, 9, 0.92)),
-            url('assets/images/background-banner (1).png'); */
             background:
                     linear-gradient(rgba(246, 246, 241, 0.85),
                         rgba(251, 251, 233, 0.92)),
@@ -2598,10 +2586,6 @@ background-position: center; */
         background-position: center;
         background-repeat: no-repeat;
             background-attachment: scroll;
-        /* background-attachment: fixed; */
-        /* gives a premium parallax depth effect */
-    /* background: var(--premium-purple); */
-    /* color: #fff; */
     color: #000000;
     padding: 60px 20 0;
     margin-top: 0;
@@ -2743,7 +2727,8 @@ background-position: center; */
     /* font-weight: 400; */
     display: flex;
     align-items: center;
-    font-size: 16px;
+font-family: 'Playball', cursive;
+    font-size: 17px;
     margin-bottom: 12px;
         cursor: pointer;
     /* color: rgba(255, 255, 255, 0.8); */
@@ -2785,12 +2770,17 @@ text-decoration: none;
 
 /* quick links */
 
+.product-links ul li a {
+    font-family: 'Playball', cursive;
+        font-size: 17px;
+}
 
 .quick-links ul li a {
     text-decoration: none;
     /* Removes the underline */
     color: inherit;
-  
+font-family: 'Playball', cursive;
+    font-size: 17px;
     transition: color 0.3s ease;
     /* Makes the color change smooth */
     display: inline-block;
@@ -2802,8 +2792,8 @@ text-decoration: none;
 /* CONTACT */
 
 .contact-card p {
-    font-size: 13px;
-    line-height: 1.6;
+  /* letter-spacing: 1px; */
+    line-height: 1.7;
     margin-bottom: 15px;
     display: flex;
     gap: 10px;
@@ -2813,6 +2803,8 @@ text-decoration: none;
 .contact-card {
     text-decoration: none;
     color: inherit;
+    font-family: 'Playball', cursive;
+        font-size: 17px;
     /* takes the color of the parent p tag */
     transition: color 0.3s ease;
     display: inline-block;
