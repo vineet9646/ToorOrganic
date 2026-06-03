@@ -388,8 +388,8 @@ button {
 
     /* ✅ Luxury dark glass background - visible on ANY section */
     background: radial-gradient(circle at center,
-            rgba(20, 20, 9, 0.75) 0%,
-            rgba(10, 10, 5, 0.88) 100%);
+            rgba(9, 9, 1, 0.979) 0%,
+            rgb(9, 9, 0) 100%);
     /* backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px); */
 
@@ -2630,44 +2630,45 @@ background-position: center; */
     font-weight: bold;
 }
 
-/* .footer-logo {
-    height: 100px;
-    margin-bottom: 20px;
-} */
 
-
-
-
-
-.footer-top {
+/* .footer-top {
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 75%);
     border-radius: 50%;
     padding: 4px;
 }
 
-
-/* LOGO */
 .footer-logo {
     height: 180px;
-    /* adjust if needed */
     object-fit: contain;
-    filter:
-        /* Layered drop-shadow for 3D luxury depth */
-        drop-shadow(0px 0px 1px rgba(0, 0, 0, 1))
-        /* pixel-tight black outline */
-        drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.95))
-        /* sharp crisp edge */
-        drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.70))
-        /* strong mid-depth */
-        drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.40));
-    /* deep ambient lift */
-    /* drop-shadow(0px 0px 12px rgba(19, 12, 1, 0.25)); */
-    /* warm gold aura */
+} */
 
-    transition: filter 0.4s ease, transform 0.4s ease;
+
+
+.footer-logo-wrap {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* background: #1a1208; */
+    background: #030200;
+    /* dark warm brown — matches logo bg */
+    border: 3px solid var(--orange);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 20px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.footer-logo-wrap:hover {
+    transform: scale(1.06) rotateZ(2deg);
+    /* subtle 3D lift */
+}
 
+.footer-logo {
+    height: 140px;
+    object-fit: contain;
+}
 
 .footer-desc {
     font-size: 17px;
