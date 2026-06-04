@@ -2575,6 +2575,123 @@ font-size: 2.0vw !important;
 }
 
 
+
+
+
+.legal-hero {
+    background: linear-gradient(rgba(20, 12, 3, 0.8), rgba(20, 12, 3, 0.85)), url('assets/images/background-banner (1).png');
+    background-size: cover;
+    background-position: center;
+    padding: 280px 4% 80px;
+    text-align: center;
+}
+
+.legal-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 56px);
+    color: #FBF9F4;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.legal-hero p {
+    font-family: 'Inter', sans-serif;
+    color: #D4820A;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.legal-card {
+    background: #FBF9F4;
+    /* Premium warm cream content wrapper */
+    border: 1px solid rgba(212, 130, 10, 0.1);
+    border-bottom: 4px solid #7AA93C;
+    /* Soft organic green accent anchor */
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+}
+
+.legal-meta {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(212, 130, 10, 0.15);
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legal-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #2a1a0a;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legal-card h2 i {
+    color: #7AA93C;
+    font-size: 18px;
+}
+
+.legal-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.legal-card ul {
+    list-style: none;
+    padding-left: 5px;
+    margin-bottom: 25px;
+}
+
+.legal-card ul li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.legal-card ul li i {
+    color: #D4820A;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .legal-card {
+        padding: 30px 20px;
+    }
+
+    .legal-hero {
+        padding: 250 4% 60px;
+    }
+}
+
+
+
+
+
 /* --------------footer -------------------------*/
 
 .footer {
