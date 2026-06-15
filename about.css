@@ -592,10 +592,10 @@ border-bottom: 3px solid #7AA93C !important; */
         max-width: 500px;
     }
 
-    .hero-image-wrap img {
+    /* .hero-image-wrap img {
         border-radius: 150px 150px 0 0;
-        /*scaled down rich */
-    }
+       
+    } */
 
     /*asymmmetric story section*/
     .story-asymmetric {
@@ -711,8 +711,8 @@ border-bottom: 3px solid #7AA93C !important; */
         font-size: 2.2rem;
     }
 
-    .hero-image-wrap img {
+    /* .hero-image-wrap img {
         border-radius: 100px 100px 0 0;
-    }
+    } */
 }
 
