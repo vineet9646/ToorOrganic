@@ -88,6 +88,37 @@ button {
 
 /*=====hero section====*/
 
+
+
+
+/* 
+.about-hero-section {
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(212, 130, 10, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 50%, rgba(122, 169, 60, 0.10) 0%, transparent 60%),
+        #fdfaf4;
+} */
+
+/* .about-hero-section {
+    background: linear-gradient(115deg,
+            #fdf6e3 0%, #fdf6e3 55%,
+            #eef4e0 55%, #eef4e0 100%);
+} */
+
+
+/* .about-hero-section {
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(212, 130, 10, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 50%, rgba(122, 169, 60, 0.10) 0%, transparent 60%),
+        #fdfaf4;
+} */
+
+/* .about-hero-section {
+    background-color: #fdfaf4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+} */
+
+
 .about-hero-section {
     display: flex;
     align-items: center;
@@ -200,6 +231,7 @@ button {
 
 .hero-image-wrap img {
     width: 100%;
+
     /* border-radius: 200px 200px 0 0; */
     /*luxury arch shape*/
     box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
