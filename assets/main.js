@@ -97,11 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
             moveSlider();
         });
 
-        let slideTimer = setInterval(nextSlide, 4000);
+        let slideTimer = setInterval(nextSlide, 10000);
         const sliderBox = document.querySelector(".slider");
         if (sliderBox) {
             sliderBox.addEventListener("mouseenter", () => clearInterval(slideTimer));
-            sliderBox.addEventListener("mouseleave", () => slideTimer = setInterval(nextSlide, 4000));
+            sliderBox.addEventListener("mouseleave", () => slideTimer = setInterval(nextSlide, 10000));
         }
     }
 

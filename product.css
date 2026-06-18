@@ -384,7 +384,7 @@ button {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('assets/images/product banner.png') center center / cover no-repeat;
+    background: url('assets/images/new-banner\ \(3\).png') center center / cover no-repeat;
     z-index: 0;
 }
 
@@ -404,7 +404,7 @@ button {
 
 .banner-text {
     position: absolute;
-    bottom: 180px;
+    bottom: 220px;
     left: 7%;
     /* right: 700px; */
     text-align: left;
