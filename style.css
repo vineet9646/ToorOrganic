@@ -991,10 +991,42 @@ font-size: 2.0vw !important;
 }
 
 /*hide desktop only UI clutter*/
-.prev,
+/* .prev,
 .next,
 .dots {
     display: none;
+} */
+
+.dots {
+    display: none;
+}
+
+.prev,
+.next {
+    display: flex !important;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: auto !important;
+    bottom: 200px !important;
+    transform: none !important;
+
+    width: 25px;
+    height: 25px;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #D4820A;
+    z-index: 20;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
 }
 
 }
@@ -1065,6 +1097,24 @@ font-size: 2.0vw !important;
         font-size: 8px !important;
         padding: 0 !important;
     }
+
+           .prev,
+           .next {
+               display: flex !important;
+               width: 20px;
+               height: 20px;
+               bottom: 150px !important;
+               font-size: 12px;
+           }
+    
+           .prev {
+               left: 15px;
+           }
+    
+           .next {
+               right: 15px;
+           }
+           
 }
 
 
