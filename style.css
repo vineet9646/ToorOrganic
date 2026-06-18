@@ -2510,7 +2510,7 @@ font-size: 2.0vw !important;
 
 .test-card {
     /* background: rgba(255, 255, 255, 0.05); */
-    background: rgba(30, 30, 20, 0.45);
+    background: rgb(4, 4, 0);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -2731,7 +2731,7 @@ font-size: 2.0vw !important;
     /* font-weight: 400; */
     display: flex;
     align-items: center;
-font-family: 'Playball', cursive;
+/* font-family: 'Playball', cursive; */
     font-size: 17px;
     margin-bottom: 12px;
         cursor: pointer;
@@ -2775,7 +2775,7 @@ text-decoration: none;
 /* quick links */
 
 .product-links ul li a {
-    font-family: 'Playball', cursive;
+    /* font-family: 'Playball', cursive; */
         font-size: 17px;
 }
 
@@ -2783,7 +2783,7 @@ text-decoration: none;
     text-decoration: none;
     /* Removes the underline */
     color: inherit;
-font-family: 'Playball', cursive;
+    /* font-family: 'Playball', cursive; */
     font-size: 17px;
     transition: color 0.3s ease;
     /* Makes the color change smooth */
@@ -2807,7 +2807,7 @@ font-family: 'Playball', cursive;
 .contact-card {
     text-decoration: none;
     color: inherit;
-    font-family: 'Playball', cursive;
+    /* font-family: 'Playball', cursive; */
         font-size: 17px;
     /* takes the color of the parent p tag */
     transition: color 0.3s ease;
