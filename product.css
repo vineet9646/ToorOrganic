@@ -543,19 +543,19 @@ button {
     }
 
     .banner-text .main-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         margin-bottom: 6px;
     }
 
     .banner-text .sub-title {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .slider-arrow {
         width: 38px;
         height: 38px;
         font-size: 1rem;
-        top: 80%;
+        top: 90%;
     }
 
     .prev-arrow {
@@ -578,11 +578,11 @@ button {
     }
 
     .banner-text .main-title {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     .banner-text .sub-title {
-        font-size: 0.85rem;
+        font-size: 0.65rem;
     }
 
                 .slider-arrow {
