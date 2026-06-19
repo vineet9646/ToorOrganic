@@ -366,7 +366,7 @@ button {
 
 
 /* ── Products Page Banner ── */
-.products-banner {
+/* .products-banner {
     position: relative;
     width: 100vw;
     left: 50%;
@@ -374,7 +374,6 @@ button {
     height: 780px;
     margin-bottom: 50px;
     margin-top: -280px;
-    /* pulls up under fixed navbar */
     overflow: hidden;
 }
 
@@ -386,8 +385,98 @@ button {
     inset: 0;
     background: url('assets/images/new-banner\ \(3\).png') center center / cover no-repeat;
     z-index: 0;
+} */
+
+
+
+
+/* ── Products Page Banner Slider Container ── */
+.products-banner-slider {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 780px;
+    margin-bottom: 50px;
+    margin-top: -280px;
+    /* Pulls up under fixed navbar */
+    overflow: hidden;
+    object-fit: contain;
 }
 
+/* Slides Wrapper */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Slides */
+.products-banner-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-desktop);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    z-index: 0;
+}
+
+/* Active Slide State */
+.products-banner-slider .slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* Reusing your overlay styles dynamically inside slides */
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 1;
+}
+
+/* Navigation Arrows Styling */
+.slider-arrow {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    background: rgba(30, 30, 14, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--orange);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background: var(--orange);
+    color: #ffffff;
+    border-color: var(--orange);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow {
+    left: 2%;
+}
+
+.next-arrow {
+    right: 2%;
+}
 
 /* 
 .banner-overlay {
@@ -429,6 +518,80 @@ button {
     opacity: 1;
 }
 
+
+/* ── Mobile Banner ── */
+@media (max-width: 768px) {
+    .products-banner-slider {
+        height: 680px;
+        margin-top: -180px;
+        /* tune this to your mobile navbar's actual height */
+        margin-bottom: 30px;
+    }
+
+    .products-banner-slider .slide {
+        background-image: var(--bg-mobile);
+        background-position: center top;
+    }
+
+    .banner-text {
+        bottom: auto;
+        top: 62%;
+        left: 6%;
+        right: 6%;
+        max-width: 90%;
+        transform: translateY(-50%);
+    }
+
+    .banner-text .main-title {
+        font-size: 2.2rem;
+        margin-bottom: 6px;
+    }
+
+    .banner-text .sub-title {
+        font-size: 1rem;
+    }
+
+    .slider-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+        top: 80%;
+    }
+
+    .prev-arrow {
+        left: 3%;
+    }
+
+    .next-arrow {
+        right: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .products-banner-slider {
+        height: 450px;
+                    /* height: 580px; */
+                    margin-top: -180px;
+                    /* tune this to your mobile navbar's actual height */
+                    margin-bottom: 30px;
+    }
+
+    .banner-text .main-title {
+        font-size: 1.7rem;
+    }
+
+    .banner-text .sub-title {
+        font-size: 0.85rem;
+    }
+
+                .slider-arrow {
+                    width: 28px;
+                    height: 28px;
+                    font-size: 1rem;
+                    top: 90%;
+                }
+}
 
 
 .premium-product-catalog {
