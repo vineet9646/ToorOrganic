@@ -75,7 +75,8 @@
              font-weight: 500;
              letter-spacing: 0.22em;
              text-transform: uppercase;
-             color: var(--gold);
+             /* color: var(--gold); */
+             color: #D4820A;
              margin-bottom: 20px;
              display: flex;
              align-items: center;
@@ -88,7 +89,8 @@
              display: block;
              width: 36px;
              height: 1px;
-             background: var(--gold);
+             /* background: var(--gold); */
+             background: #D4820A;
              opacity: 0.6;
          }
     
@@ -104,7 +106,8 @@
     
          .gallery-hero h1 em {
              font-style: italic;
-             color: var(--gold-light);
+             /* color: var(--gold-light); */
+              color: #D4820A;
          }
     
          .hero-sub {
@@ -126,11 +129,13 @@
          .hero-divider span {
              width: 40px;
              height: 1px;
-             background: rgba(201, 168, 76, 0.4);
+             /* background: rgba(201, 168, 76, 0.4); */
+             background: #D4820A;
          }
     
          .hero-divider svg {
-             fill: var(--gold);
+             /* fill: var(--gold); */
+             fill: #D4820A;
              opacity: 0.7;
              width: 18px;
              height: 18px;
@@ -159,7 +164,8 @@
                              font-weight: 600;
                              letter-spacing: 0.22em;
                              text-transform: uppercase;
-                             color: var(--gold);
+                             /* color: var(--gold); */
+                             color: #D4820A;
                              margin-bottom: 14px;
                          }
             
@@ -168,13 +174,15 @@
                              font-size: clamp(2.2rem, 4vw, 3.6rem);
                              font-weight: 300;
                              line-height: 1.1;
-                             color: var(--ink);
+                             /* color: var(--ink); */
+                            color: #5A7E22;
                              margin-bottom: 16px;
                          }
             
                          .section-title em {
                              font-style: italic;
-                             color: var(--gold-dark);
+                             /* color: var(--gold-dark); */
+                             color: #D4820A;
                          }
             
                          .section-sub {
@@ -188,7 +196,7 @@
                          .gold-rule {
                              width: 48px;
                              height: 1px;
-                             background: linear-gradient(90deg, transparent, var(--gold), transparent);
+                             background: linear-gradient(90deg, transparent, #D4820A, transparent);
                              margin: 24px auto 0;
                          }
 
@@ -220,13 +228,15 @@
                                                  }
                         
                                                  .filter-btn:hover {
-                                                     border-color: var(--gold);
-                                                     color: var(--gold-dark);
+                                                     border-color: #D4820A;
+                                                     color: #D4820A;
                                                  }
                         
                                                  .filter-btn.active {
-                                                     background: var(--gold);
-                                                     border-color: var(--gold);
+                                                     /* background: var(--gold);
+                                                     border-color: var(--gold); */
+                                                        background: #D4820A;
+                                                        border-color: #D4820A;
                                                      color: var(--white);
                                                  }
                         
@@ -330,8 +340,10 @@
                                                  }
                         
                                                  .media-item:hover .play-icon {
-                                                     background: var(--gold);
-                                                     border-color: var(--gold);
+                                                     /* background: var(--gold);
+                                                     border-color: var(--gold); */
+                                                        background: #D4820A;
+                                                        border-color: #D4820A;
                                                      transform: translate(-50%, -50%) scale(1.1);
                                                  }
                         
@@ -391,7 +403,7 @@
                                                      font-size: 10px;
                                                      letter-spacing: 0.16em;
                                                      text-transform: uppercase;
-                                                     color: var(--gold);
+                                                     color: #D4820A;
                                                      margin-bottom: 6px;
                                                      display: block;
                                                  }
@@ -414,8 +426,8 @@
                                                  }
                         
                                                  .lightbox-close:hover {
-                                                     border-color: var(--gold);
-                                                     color: var(--gold);
+                                                     border-color: #D4820A;
+                                                     color: #D4820A;
                                                  }
                         
                                                  .lightbox-nav {
@@ -436,8 +448,8 @@
                                                  }
                         
                                                  .lightbox-nav:hover {
-                                                     border-color: var(--gold);
-                                                     color: var(--gold);
+                                                     border-color: #D4820A;
+                                                     color: #D4820A;
                                                  }
                         
                                                  .lightbox-prev {
