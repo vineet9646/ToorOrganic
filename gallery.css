@@ -47,7 +47,7 @@
     }
 
          /* ── HERO ── */
-         .gallery-hero {
+         /* .gallery-hero {
              padding-top: 72px;
              min-height: 90vh;
              background: linear-gradient(160deg, var(--green) 0%, #1a2e1b 60%, #0e1a0e 100%);
@@ -75,7 +75,6 @@
              font-weight: 500;
              letter-spacing: 0.22em;
              text-transform: uppercase;
-             /* color: var(--gold); */
              color: #D4820A;
              margin-bottom: 20px;
              display: flex;
@@ -89,7 +88,6 @@
              display: block;
              width: 36px;
              height: 1px;
-             /* background: var(--gold); */
              background: #D4820A;
              opacity: 0.6;
          }
@@ -106,7 +104,6 @@
     
          .gallery-hero h1 em {
              font-style: italic;
-             /* color: var(--gold-light); */
               color: #D4820A;
          }
     
@@ -129,19 +126,127 @@
          .hero-divider span {
              width: 40px;
              height: 1px;
-             /* background: rgba(201, 168, 76, 0.4); */
              background: #D4820A;
          }
     
          .hero-divider svg {
-             /* fill: var(--gold); */
              fill: #D4820A;
              opacity: 0.7;
              width: 18px;
              height: 18px;
          }
 
+ */
 
+
+
+
+/* ── GALLERY BANNER ── */
+/* ── GALLERY BANNER ── */
+.gallery-banner-section {
+    width: 100%;
+    background: #0e1a0e;
+    margin-top: -100px;
+}
+
+.gallery-banner-inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.gallery-banner-inner picture {
+    width: 100%;
+    display: block;
+}
+
+.gallery-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.80);
+}
+
+.gallery-banner-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 6vw;
+    background: linear-gradient(90deg, rgba(14, 26, 14, 0.78) 0%, rgba(14, 26, 14, 0.3) 50%, transparent 100%);
+}
+
+.gallery-banner-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #D4820A;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gallery-banner-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: #D4820A;
+    opacity: 0.7;
+}
+
+.gallery-banner-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #FAF7F0;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+}
+
+.gallery-banner-title em {
+    font-style: italic;
+    color: #D4820A;
+}
+
+.gallery-banner-sub {
+    font-size: 14.5px;
+    font-weight: 300;
+    color: rgba(250, 247, 240, 0.72);
+    letter-spacing: 0.04em;
+    max-width: 380px;
+    line-height: 1.75;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+    .gallery-banner-section {
+        margin-top: -120px;
+        /* less pull-up on mobile */
+    }
+
+    .gallery-banner-overlay {
+        /* text sits in the top-left empty area of the mobile image */
+        justify-content: flex-start;
+        padding: 8vw 6vw 0;
+        background: linear-gradient(180deg, rgba(14, 26, 14, 0.70) 0%, rgba(14, 26, 14, 0.15) 55%, transparent 100%);
+    }
+
+    .gallery-banner-title {
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+    }
+
+    .gallery-banner-sub {
+        font-size: 13px;
+        max-width: 260px;
+    }
+}
 
                          /* ── SECTION ── */
                          .section {
