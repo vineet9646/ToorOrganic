@@ -37,7 +37,7 @@ font-family: sans-serif;
 }
 
 body {
-    /* Subtle mesh gradient background gives 3D depth */
+    
     /* background: radial-gradient(circle at top left, #ffffff, #150319, #e9d5ff); */
     background-attachment: fixed;
     color: #333;
@@ -149,7 +149,6 @@ button {
 
 
 
-/* LOGO WRAPPER — adds a soft background glow behind the logo */
 .logo {
     /* background: radial-gradient(ellipse at center, rgb(15, 1, 1) 50%, rgba(255, 255, 255, 0) 75%); */
     border-radius: 50%;
@@ -258,35 +257,34 @@ button {
 
 /* Container spacing */
 .nav-cta {
-    margin-left: 40px !important; /*extra space to separate from other links */
+    margin-left: 40px !important; 
 }
 
 .phone-nav-btn {
     /* background-color: #0D0D07 !important; */
     background-color: #ffffff !important;
     color: #D4820A !important;
-    /* Elegant black contrast text */
+   
     padding: 10px 22px;
-    /* border-radius: 30px; */
+    
     font-weight: 700;
     font-size: 14px;
-    /* Scaled cleanly for phone string lengths */
+    
     letter-spacing: 0.5px;
     text-transform: none !important;
-    /* Prevents text transformation issues */
+    
     border: 2px solid #D4820A !important;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    /* Gap between the font-awesome icon and text string */
+    
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     box-shadow: 0 4px 15px rgba(214, 130, 10, 0.2);
     white-space: nowrap;
-    /* Ensures number never breaks down to a 2nd line */
+   
 }
 
 
-/* Luxury Hover State Change */
 .phone-nav-btn:hover {
     background: transparent !important;
     color: #D4820A !important;
@@ -294,7 +292,6 @@ button {
     transform: translateY(-2px);
 }
 
-/* Subtle pulse or style control specifically for the phone icon inside navbar button */
 .phone-nav-btn i {
     font-size: 12px;
 }
@@ -307,7 +304,7 @@ button {
     transform: translateY(-50%);
     z-index: 998;
     width: 110px;
-    /* ✅ Bigger size */
+   
     height: 110px;
     border-radius: 50%;
     overflow: hidden;
@@ -317,14 +314,14 @@ button {
     justify-content: center;
     padding: 5px;
 
-    /* ✅ Luxury dark glass background - visible on ANY section */
+  
     background: radial-gradient(circle at center,
             rgba(20, 20, 9, 0.952) 0%,
             rgba(10, 10, 5, 0.973) 100%);
     /* backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px); */
 
-    /* ✅ Premium layered border glow */
+    
     border: 2.5px solid #D4820A;
     /* box-shadow:
         0 0 0 1px rgba(212, 130, 10, 0.2),
@@ -332,7 +329,7 @@ button {
         0 8px 32px rgba(0, 0, 0, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.08); */
 
-    /* ✅ Smooth transition */
+    
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -346,7 +343,7 @@ button {
     transition: transform 0.4s ease;
 }
 
-/* ✅ Hover: glows and grows */
+
 .floating-logo:hover {
     width: 140px;
     height: 140px;
@@ -365,7 +362,7 @@ button {
     transform: scale(1.05) rotate(3deg);
 }
 
-/* ✅ Mobile */
+
 @media (max-width: 768px) {
 
 
@@ -376,7 +373,7 @@ button {
     transform: translateY(-50%);
     z-index: 998;
     width: 50px;
-    /* ✅ Bigger size */
+   
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
@@ -386,14 +383,14 @@ button {
     justify-content: center;
     padding: 5px;
 
-    /* ✅ Luxury dark glass background - visible on ANY section */
+    
     background: radial-gradient(circle at center,
             rgba(9, 9, 1, 0.979) 0%,
             rgb(9, 9, 0) 100%);
     /* backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px); */
 
-    /* ✅ Premium layered border glow */
+    
     border: 2.5px solid #D4820A;
     /* box-shadow:
         0 0 0 1px rgba(212, 130, 10, 0.2),
@@ -401,7 +398,7 @@ button {
         0 8px 32px rgba(0, 0, 0, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.08); */
 
-    /* ✅ Smooth transition */
+    
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -425,7 +422,7 @@ button {
     transform: translateY(-50%);
     z-index: 998;
     width: 70px;
-    /* ✅ Bigger size */
+  
     height: 70px;
     /* border-radius: 50%; */
     overflow: hidden;
@@ -435,7 +432,7 @@ button {
     justify-content: center;
 
 
-    /* ✅ Smooth transition */
+    
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -449,7 +446,6 @@ button {
     transition: transform 0.4s ease;
 }
 
-/* ✅ Hover: glows and grows */
 .floating-whatsapp:hover {
     width: 80px;
     height: 80px;
@@ -460,7 +456,7 @@ button {
     transform: scale(1.05) rotate(3deg);
 }
 
-/* ✅ Mobile */
+
 @media (max-width: 768px) {
 
     .floating-whatsapp {
@@ -470,7 +466,7 @@ button {
         transform: translateY(-50%);
         z-index: 998;
         width: 50px;
-        /* ✅ Bigger size */
+        
         height: 50px;
         border-radius: 50%;
         overflow: hidden;
@@ -480,7 +476,7 @@ button {
         justify-content: center;
         padding: 5px;
 
-        /* ✅ Smooth transition */
+       
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
@@ -519,7 +515,7 @@ button {
     min-width: 100%;
     display: flex;
     align-items: center;
-    /*vertically centers the text overlay*/
+   
 }
 
 .slide img {
@@ -917,19 +913,18 @@ font-size: 2.5vw !important;
         letter-spacing: 0.px !important; */
     }
 
-/* Force line-breaks to disappear cleanly on small form factors if they crowd lines */
+
 .hero-desc br {
     display: inline !important;
 }
 
 
-/*compact button stact for vertical layout*/
 .hero-btn-group {
 
 
 display: flex !important;
     flex-direction: column !important;
-    /* Inline setup keeps spacing elegant without eating vertical real estate */
+    
     align-items: flex-start !important;
     gap: 12px !important;
     margin-top: 20px !important;
@@ -987,10 +982,9 @@ font-size: 2.0vw !important;
 
 .btn-secondary i {
     color: #D4820A !important;
-    /* Accent gold play arrow highlight */
+   
 }
 
-/*hide desktop only UI clutter*/
 /* .prev,
 .next,
 .dots {
@@ -1038,31 +1032,31 @@ font-size: 2.0vw !important;
 .slider {
     padding-top: 1px !important;
 }
-    /* 1. Recalibrate Layout Placement */
+    
     .hero-overlay {
         padding-top: 160px !important;
-        /* Locks text precisely below your transparent navbar */
+       
     }
 
     .hero-content {
         padding: 0 20px !important;
-        /* Clean margins for small displays */
+        
         max-width: 90% !important;
-        /* Keeps text layout readable on the dark side of the sky */
+        
     }
 
-    /* 2. Precision Text Sizes to Avoid Overlapping the Printed Rice Sack */
+    
     .hero-badge {
         font-size: 10px !important;
         letter-spacing: 1px !important;
         margin-bottom: -1px !important;
         margin-top: 8px !important;
-         /* Adjusts badge position to fit better on small screens */
+        
     }
 
     .premium-heading {
         font-size: 15px !important;
-        /* Locked size keeps it crisp and avoids vertical stretching */
+        
         line-height: 1.1 !important;
         margin-bottom: -10px !important;
     }
@@ -1076,11 +1070,11 @@ font-size: 2.0vw !important;
 
   
 
-    /* 3. Streamlined Compact Mobile Button Row */
+   
     .hero-btn-group {
         display: flex !important;
         flex-direction: column !important;
-        /* Keeps them side-by-side to save vertical space */
+       
         align-items: flex-start !important;
         gap: 8px !important;
         margin-top: 10px !important;
@@ -1088,7 +1082,7 @@ font-size: 2.0vw !important;
 
     .btn-primary {
         padding: 6px 12px !important;
-        /* Smaller, tap-friendly luxury target size */
+       
         font-size: 8px !important;
         letter-spacing: 0.5px !important;
     }
@@ -1145,7 +1139,7 @@ font-size: 2.0vw !important;
 
 
     background: #ffffff;
-    /* True matching dark luxury base background */
+   
     padding: 80px 4%;
     width: 100%;
     box-sizing: border-box;
