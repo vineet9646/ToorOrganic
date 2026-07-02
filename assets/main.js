@@ -240,3 +240,10 @@ function highlightCard(element) {
     allCards.forEach(card => card.classList.remove('featured'));
     element.classList.add('featured');
 }
+
+
+
+
+
+
+
