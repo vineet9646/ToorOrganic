@@ -1005,6 +1005,44 @@ background: rgba(212, 175, 55, 0.08);
 
 
 
+/* --- Product Price Block --- */
+.product-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 12px;
+}
+
+
+
+.mrp-new {
+    /* font-family: 'Playfair Display', serif; */
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--orange);
+    line-height: 1;
+}
+
+
+
+.mrp-tax-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: -6px;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .mrp-new {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
 /* contact us */
 
 .contact-page {
