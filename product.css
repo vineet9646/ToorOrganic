@@ -1037,6 +1037,7 @@ background: rgba(212, 175, 55, 0.08);
 @media screen and (max-width: 768px) {
     .mrp-new {
         font-size: 1.3rem;
+        color: var(--orange);
     }
 }
 
