@@ -1275,7 +1275,6 @@ color: var(--orange);
 }
 
 
-
 /* ================================
    RECOMMENDED PRODUCTS SECTION
    ================================ */
@@ -1344,7 +1343,7 @@ color: var(--orange);
     background: #ffffff;
     border: 1px solid rgba(212, 130, 10, 0.15);
     border-radius: 14px;
-    overflow: hidden;
+    /* overflow removed so hover drop-shadow on product images isn't clipped */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     display: flex;
@@ -1365,6 +1364,9 @@ color: var(--orange);
     justify-content: center;
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* corners rounded individually since parent no longer clips */
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
 }
 
 .related-media img {
@@ -1391,6 +1393,7 @@ color: var(--orange);
     font-weight: 700;
     padding: 5px 11px;
     border-radius: 20px;
+    z-index: 2;
 }
 
 .related-wishlist {
@@ -1407,6 +1410,7 @@ color: var(--orange);
     color: var(--orange);
     font-size: 0.85rem;
     border: 1px solid rgba(0, 0, 0, 0.06);
+    z-index: 2;
 }
 
 .related-body {
@@ -1414,6 +1418,7 @@ color: var(--orange);
     display: flex;
     flex-direction: column;
     flex: 1;
+    border-radius: 0 0 14px 14px;
 }
 
 .related-cat {
@@ -1486,6 +1491,7 @@ color: var(--orange);
     text-decoration: none;
     border: 1px solid var(--orange);
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .related-view-btn:hover {
@@ -1495,6 +1501,7 @@ color: var(--orange);
 
 .related-cart-btn {
     width: 42px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1541,6 +1548,28 @@ color: var(--orange);
 
     .related-price {
         font-size: 1.3rem;
+    }
+}
+
+
+/* ================================
+   BREAKPOINT: 1024px and below
+   (fills the gap between 1150px and 768px so
+   small laptops / split-screen windows don't
+   feel cramped with 3 columns)
+   ================================ */
+@media screen and (max-width: 1024px) {
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .related-media {
+        height: 240px;
+    }
+
+    .related-name {
+        min-height: 44px;
     }
 }
 
@@ -1636,7 +1665,7 @@ color: var(--orange);
     }
 
     .related-media {
-        height: 240px;
+        height: 220px;
     }
 
     .related-badge {
@@ -1660,7 +1689,7 @@ color: var(--orange);
 
     .related-name {
         font-size: 1.1rem;
-        min-height: unset;
+        min-height: 46px;
     }
 
     .related-price {
@@ -1677,6 +1706,6 @@ color: var(--orange);
     }
 
     .related-cart-btn {
-        width: 42px;
+        width: 38px;
     }
 }
